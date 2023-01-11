@@ -7,5 +7,5 @@
 
 const a = +prompt(`Сколько минут?`);
 const b =  Math.floor (a / 60);
-const c =  
+const c =  a % 60;
 console.log(`${b} часов ${c} минут`);

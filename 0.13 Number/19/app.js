@@ -3,3 +3,17 @@
 // ax
 // 2 + bx + c = 0
 // Если уравнение имеет два корня, то следует вывести их в порядке возрастания
+
+const a = +prompt (`Введите значение`);
+const b = +prompt (`Введите значение`);
+const c = +prompt (`Введите значение`);
+let x1 = ( -b - (Math.sqrt(D) / 2 * a));
+let x2 = (-b + (Math.sqrt(D) / 2 * a));
+
+if (D < 0) {
+    console.log(`нет корней`);
+} else if (D == 0) {
+    console.log(`один корень: x1=x2= ${x1}.`);
+} else if (D > 0) {
+    console.log(`два корня: x1= ${x1}; x2= ${x2}.`);
+}

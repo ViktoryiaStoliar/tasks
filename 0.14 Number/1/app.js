@@ -8,7 +8,7 @@ if (a > b) {
     console.log(b);
 }
 
-// console.log( Math.max (a , b));  второй способ вывода максимального числа
+console.log( Math.max (a , b));  // второй способ вывода максимального числа
 
 
-// a > b ? console.log(a) : console.log(b);  теринарный способ
+a > b ? console.log(a) : console.log(b);  // теринарный способ

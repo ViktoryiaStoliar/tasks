@@ -5,7 +5,7 @@
 let a = prompt(`введите число`);
 
 if (isNaN(a)) {
-    console.log(`error`);
+    console.log(`некорректный ввод`);
 
 } else {
     a = +a;

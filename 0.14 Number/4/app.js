@@ -1,11 +1,10 @@
 // Есть значение. Добавить проверку на ввод только чисел. Если число, вывести true,
-// в противном случае false (isNaN)
+// в противном случае false ( методом isNaN)
 
 const a = prompt(`значение`);
 
-if (isNan(a)) {
-    log
-
+if (isNaN(a)) {
+    console.log(`false`);
 } else {
-    log
+    console.log(`true`);
 }

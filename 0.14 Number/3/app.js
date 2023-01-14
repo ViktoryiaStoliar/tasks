@@ -9,7 +9,7 @@ switch (a) {
         console.log(`понедельник`);
         break;
 
-    case 2
+    case 2:
         console.log(`вторник`);
         break;
 

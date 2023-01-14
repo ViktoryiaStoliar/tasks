@@ -5,7 +5,7 @@
 const a = prompt(`значение`);
 
 if (isNaN(a)) {
-    console.log(`ошибка`);
+    console.log(`это не число! Введите число`);
 } else {
     if (a > 0) {
         console.log(`${a} - положительное, ${a.length}`);

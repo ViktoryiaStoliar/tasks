@@ -2,3 +2,13 @@
 // сантиметров. Добавить проверку на ввод только чисел
 // 345 -> 3
 // 100 -> 1
+
+
+const a = prompt(`Сколько см вы хотите перевести в м?`);
+
+ if (!isNaN (a)) {
+    console.log(Math.round(a / 100));
+ }
+
+ !isNaN (a) ? console.log(Math.round(a / 100)) : `error`;
+

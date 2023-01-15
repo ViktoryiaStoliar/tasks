@@ -8,6 +8,8 @@ const a = prompt(`Сколько см вы хотите перевести в м
 
  if (!isNaN (a)) {
     console.log(Math.round(a / 100));
+ } else {
+   console.log(`Некорректный ввод`);
  }
 
  !isNaN (a) ? console.log(Math.round(a / 100)) : `error`;

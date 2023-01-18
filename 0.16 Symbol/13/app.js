@@ -3,12 +3,16 @@
 // 53 -> 8
 // 135 -> 9
 
-const str = `53`;
+const str = `135`;
 
 
-let result = 0;
+if (!isNaN(str)) {
+    console.log(`сумма всех чисел в строке: ${+str[0] + +str[1] + +str[2]}`);
+}
 
-for (let i = 0; i < str.length; i++) {
-    result += +str[i];
-} 
-console.log(result);
+const str1 = `135`;
+let a = 0;
+for (let i = 0; i < str1.length; i++) {
+    a += +str1[i];
+}
+console.log(a);

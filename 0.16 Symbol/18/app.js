@@ -1,17 +1,17 @@
-// На вход программе подается строка. Напишите программу, которая меняет
+// 18. На вход программе подается строка. Напишите программу, которая меняет
 // регистр символов, другими словами замените все строчные символы заглавными
 // и наоборот.
 // Swap Case => sWAP cASE
 
 const str = `Swap Case`;
-let result = '';
+let res = '';
 
-for (i = 0; i < str.length; i++) {
-    if (str[i] == str[i].toLowerCase()) {
-        result += str[i].toUpperCase();
+for (let i = 0; i < str.length; i++) {
+    if (str[i] == str[i].toUpperCase()) {
+        res += str[i].toLowerCase();
     }
-    for (str[i] == str[i].toUpperCase()) {
-        result += str[i].toLowerCase();
+    if (str[i] == str[i].toLowerCase()) {
+        res += str[i].toUpperCase();
     }
 }
-console.log(result);
+console.log(res);

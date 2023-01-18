@@ -3,6 +3,7 @@
 // подстроку «хорош» во всевозможных регистрах.
 // я очень хороший текст => true
 
-let str = prompt(`Введите строку`);
-const a = `хорош`;
-if (str.includes(a) && (str.toUpperCase || str.toLowerCase)) console.log(true);
+let str = `я очень хороший текст`;
+if (str.includes('хорош') && (str.toLowerCase() || str.toUpperCase())) {
+    console.log(true);
+}

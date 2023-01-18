@@ -1,6 +1,12 @@
-// Дан массив ['я', 'учу', 'javascript', '!']. С помощью метода join преобразуйте массив в
-// строку 'я+учу+javascript+!.
+// 15. Пользователь вводит строку. Необходимо вывести все гласные отдельной строкой
+// fullstack => ua
 
-const str = ['я', 'учу', 'javascript', '!'];
+const str = `iypiuaypiuseypuiypaaaaaaaaaaaaaa`;
+let lowels = '';
 
-console.log(str.join("+"));
+for (let i = 0; i < str.length; i++) {
+    if (str[i] == `u` || str[i] == `a`) {
+        lowels += str[i] 
+    }
+}
+ console.log(lowels);

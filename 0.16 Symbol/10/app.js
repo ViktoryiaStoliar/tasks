@@ -1,11 +1,6 @@
-// На входе строка, необходимо убрать все лишние пробелы и привести каждый
-// элемент к нижнему регистру. Повторить строку 3 раза. Добавить проверку на ввод
-// только текстовых значений
-
-const str =  prompt(`введите строку`).toLowerCase().trim();
-
-if (isNaN(str)) {
-    console.log(str.repeat(3));
-} else console.log(`error`);
-
-console.log(isNaN(str) ? str.repeat(3) : `error`);
+//  10. Найдите квадратный корень числа. Результат округлите до целых, десятых, сотых.
+const a = prompt(`Введите число`);
+b = Math.sqrt(a);
+console.log(Math.round(b)); 
+console.log(Math.sqrt(a).toFixed(1)); 
+console.log(Math.sqrt(a).toFixed(2));

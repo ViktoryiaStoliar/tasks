@@ -3,6 +3,11 @@
 // мем -> true
 // тест -> false
 
-const word = 'anna'.trim().toLowerCase();
-const revword = word.slip('').reverse().join('')
-if(word === revword)
+// const word = 'anna'.trim().toLowerCase();
+// const revword = word.slip('').reverse().join('')
+// if(word === revword)
+
+
+const word = prompt(`Слово`);
+a = word.split();
+console.log(a ==a.reverse() ? true : false);

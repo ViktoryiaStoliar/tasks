@@ -4,8 +4,8 @@
 const a = +prompt(`Введите число`);
 const b = Math.sqrt(a);
 
-if (b % 1 == 0) {
-    console.log(b);
-} else {
+if (b % 2 != 0) {
     console.log(Math.round (b));
+} else {
+    console.log(b);
 }

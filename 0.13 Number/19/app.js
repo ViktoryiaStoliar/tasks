@@ -4,11 +4,11 @@
 // 2 + bx + c = 0
 // Если уравнение имеет два корня, то следует вывести их в порядке возрастания
 
-const a = +prompt (`Введите значение`);
-const b = +prompt (`Введите значение`);
-const c = +prompt (`Введите значение`);
-let D = b ** 2 - 4 * a *c;
-let x1 = ( -b - (Math.sqrt(D) / 2 * a));
+const a = +prompt(`Введите значение`);
+const b = +prompt(`Введите значение`);
+const c = +prompt(`Введите значение`);
+let D = b ** 2 - 4 * a * c;
+let x1 = (-b - (Math.sqrt(D) / 2 * a));
 let x2 = (-b + (Math.sqrt(D) / 2 * a));
 
 

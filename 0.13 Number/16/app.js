@@ -4,8 +4,17 @@
 const a = +prompt(`Введите число`);
 const b = Math.sqrt(a);
 
-if (b % 1 == 0) {
+if (b % 2 == 0) {
     console.log(b);
 } else {
     console.log((b.toFixed(2)));
+}
+
+const c = +prompt(`Введите число`);
+// const b = Math.sqrt(a);
+
+if (Math.sqrt(c) % 2 == 0) {
+    console.log(Math.sqrt(c));
+} else {
+    console.log((Math.sqrt(c).toFixed(2)));
 }

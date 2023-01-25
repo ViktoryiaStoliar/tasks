@@ -5,13 +5,8 @@ const a = +prompt (`Введите значение`);
 
 if (a == 0) {
     console.log(`ноль`);
-}
- if (a < 0) {
+}else if (a < 0) {
     console.log(`Отрицательное`);
- } else {
-    console.log(`Положительное`);
- }
-
- if (a > 0) {
+ } else  {
     console.log(`Положительное`);
  }

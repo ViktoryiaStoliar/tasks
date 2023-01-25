@@ -4,7 +4,6 @@
 
 const a = prompt(`Введите первое число от 0 до 10`);
 const b = prompt(`Введите первое число от 0 до 10`);
-let c = a + b;
 if (isNaN){
     console.log(`I\’m ${+a + +b}`);
 } else {

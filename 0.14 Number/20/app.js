@@ -6,16 +6,15 @@ const str = prompt(`Введите строку`);
 
 if (isNaN(str)) {
 
-    if (str.includes(`hschool`)) {
+    if (str.includes(`hschool`) || str === `hschool`) {
         console.log(`true`);
     } else {
         console.log(`false`);
     }
 } else {
-    if (str % 2 === 0) {
+    if (str % 2 == 0) {
         console.log(`четное`);
     } else {
         console.log(`нечетное`);
     }
-
 }

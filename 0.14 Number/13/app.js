@@ -13,3 +13,11 @@ if (!isNaN(a)) {
 } else {
     console.log(`Некорректный ввод`); ``
 }
+let res =``
+for (let i = 0; i < a.length; i++){
+    if(a[i] % 2 == 0){
+        console.log(`четное`);
+    } else {
+        console.log(`нечетное`);
+    }
+}

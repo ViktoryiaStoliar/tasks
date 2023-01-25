@@ -10,3 +10,12 @@ if (!isNaN(num) && num > 0) {
 } else {
     console.log(`некорректный воод`);
 }
+
+let res = 0;
+let b = 1;
+for(let i = 0; i < num.length; i++){
+    res += +num[i];
+    b *= +num[i];
+}
+console.log(res);
+console.log(b); 

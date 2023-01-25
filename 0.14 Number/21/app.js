@@ -4,7 +4,9 @@
 const str = prompt(`Введите строку`);
 
 if (isNaN(str)) {
-    console.log(str.split(" "));
+    console.log(str.split(""));
 } else {
     console.log(`некорректный ввод`);
 }
+
+isNaN(str) ? console.log(str.split('')) : console.log(`error`);

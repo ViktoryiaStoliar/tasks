@@ -12,10 +12,10 @@ const arr = [1, 2, 3, 4, 5];
 //     i++
 // }
 
-// let a = 0;
-// do {
-//     console.log(arr[i]);
-//     a++
-// }
-// while (a < arr.length)
+let a = 0;
+do {
+    console.log(arr[i]);
+    a++
+}
+while (a < arr.length)
 

@@ -9,7 +9,6 @@ let res = [];
 //     if(arr[i][0] == "1" || arr[i][0] == "2" || arr[i][0] == "5"){
 //         res.push(arr[i])
 //     }
-    
 // }
 // console.log(res);
 

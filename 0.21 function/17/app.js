@@ -2,3 +2,21 @@
 // массива с клавиатуры. Значения могут быть строкового либо числового типа
 // данных. Необходимо из этих элементов составить 2 массива: со строками и второй
 // массив, соответственно, с числами. forEach
+
+const n = 6;
+let arr = [];
+let arr1 = [];
+let arr2 = [];
+for(i = 0; i < 6; i++){
+    let a = prompt();
+    arr.push(a)
+}
+
+arr.forEach(function(el){
+    if(isNaN(arr)){
+        arr1.push(el)
+    } else {
+        arr2.push(el)
+    }
+})
+console.log(arr1, arr2);

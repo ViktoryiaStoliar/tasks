@@ -8,9 +8,10 @@ const n = prompt('Введите количества элементов');
 const arr = [];
 let stat = 'javascript';
 
-for (i = 0; i < n; i++) {
-    if 
-arr.push(prompt('Введите значения массива'))
+for (let i = 0; i < n; i++) {
+    let b = prompt();
+    if (isNaN(b))
+    arr.push(b);
 }
 
 const newArr = arr.filter(function (el) {
@@ -21,3 +22,12 @@ const newArr = arr.filter(function (el) {
     }
 });
 console.log(newArr);
+
+// let neWarr = [];
+
+// arr.forEach(function(el){
+//     if(el.includes(stat)){
+//         neWarr.push(el)
+//     }
+// })
+// console.log(neWarr);

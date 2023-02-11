@@ -15,3 +15,5 @@ function showRes(words_){
 }
 let result = showRes(words)
 console.log(result);
+
+

@@ -11,17 +11,50 @@
 // }
 
 
-const obj ={};
+const obj = {};
+const n = prompt('кол-во элементов массива');
+const arr = [];
 
-let arr = [];
-let n = 5;
+// for (let i = 0; i < n; i++) {                    //Это если бы было заполнение pronpt-ом
+//     let a = prompt('введите значение массива');
+//     if (!isNaN(a)) {
+//         arr.push(a)
+//     } else {
+//         console.log('error');
+//         break;
+//     }
+// }
 
 for (let i = 0; i < n; i++) {
-    let a = Math.round(Math.random() * 10);
+    let a = Math.round(Math.random() * 100)
     arr.push(a)
 }
 
-for(let i = 0; i < n; i++){
-obj[i] = arr[i]
-}
-console.log(obj)
+obj[n] = arr;
+
+console.log(arr);
+console.log(obj);
+
+
+
+
+
+
+
+
+
+
+// const obj ={};
+
+// let arr = [];
+// let n = 5;
+
+// for (let i = 0; i < n; i++) {
+//     let a = Math.round(Math.random() * 10);
+//     arr.push(a)
+// }
+
+// for(let i = 0; i < n; i++){
+// obj[i] = arr[i]
+// }
+// console.log(obj)

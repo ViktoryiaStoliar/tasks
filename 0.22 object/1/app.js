@@ -4,10 +4,25 @@
 // • Измените значение свойства name на hschool
 // • Удалите свойство name из объекта
 
+const obj= {};
 
-const obj = {}
 obj.id = 1;
 obj.name = 'udemy';
 obj.name = 'hschool';
 delete obj.name;
+
 console.log(obj);
+
+
+
+
+
+
+
+
+// const obj = {}
+// obj.id = 1;
+// obj.name = 'udemy';
+// obj.name = 'hschool';
+// delete obj.name;
+// console.log(obj);

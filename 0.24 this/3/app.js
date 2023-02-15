@@ -8,33 +8,23 @@
 const str = prompt('Введите е-mail');
 const obj = {};
 
-function inclMail(str_) {
-    if (str_.includes('@') || (str_.endsWith('.com') || ('.ru'))) {
-         return true
+function prov(str_) {
+    if (str_.includes('@') && (str_.endsWith('.com') || ('.ru'))) {
+        // let obj_={
+        //     email : str,
+        //     active : 
+        // };
+        return obj.mail = { email: str_,active: true }
     } else {
-        return false
+        return obj.mail = { active: false }
     }
 }
-console.log(str);
 
-
-function mail(str_){
-    const bool = inclMail(str_);
-    if  (bool === true){
-        const obj = {str}
-        return obj
-    } else {
-        return false
-        }
-}
-
-const obj = mail(str)
-console.log(res);
+const obj_ = prov(str)
+console.log(obj_);
+   
 
 
 
-// let str = prompt(`url`);
 
-// if (str.startsWith("http") && str.includes("/") && (str.endsWith(".com")|| (".ru"))) {
-//     console.log(true);
-// } else console.log(false);
+

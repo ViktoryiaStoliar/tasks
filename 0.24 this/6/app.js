@@ -1,24 +1,16 @@
-// 6. На входе n – количество элементов массива. Далее производится заполнение
-// массива с клавиатуры. Реализуйте 2 функции. Первая для формирования массива.
-// Вторая для нахождения количества элементов массива
+// 6. Работа с замыканием. Реализуйте функцию, которая будет считать количество 
+// своих вызовов
 
-
-const n = 5;
-
-function doArray(arr_){
-    const arr = [];
-
-    for (let i = 0; i < n; i++){
-        let a = prompt();
-        arr.push(a);
-    } return arr;
+function call(){
+    let count = 0;
+    return () => {
+        count++
+        console.log(count);
+    }
 }
 
-function show_l(array_) {
-    return array_ .length;
-}
+const wrapperCall = call()
 
-let array = doArray(n);
-let result = show_l(array)
-console.log(array);
-console.log(result);
+wrapperCall()
+wrapperCall()
+wrapperCall()

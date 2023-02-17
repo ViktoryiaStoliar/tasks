@@ -6,20 +6,24 @@ const str = 'khgckhgckhgckhg khgcdkhgckh vlhjlj';
 const letter = 'k';
 
 function isValid(a, b) {
-    console.log(typeof (a) === 'string' && typeof (b) === 'string' ? true : false);
-    return (a, b)
+    if (typeof (a) === 'string' && typeof (b) === 'string') {
+        return true
+    }
+    else return false
+
 };
 
 function quantity(a, b) {
-    const bool = isValid(a,b);
+    const bool = isValid(a, b);
     if (bool === true) {
-        const total = 0;
-        for (let i = 0; i < a.lenghth; i++);
-        if (a.includes(b)) {
-            total++
-        }
-    } return total 
+        let total = 0;
+        for (let i = 0; i < a.length; i++) {
+            if (a[i] === b) {
+                total++
+            }
+        } return total
+    } else return 'error'
 }
 
-const total = quantity(str, letter)
+let total = quantity(str, letter)
 console.log(total);

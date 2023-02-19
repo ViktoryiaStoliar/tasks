@@ -2,12 +2,21 @@
 
 const arr = [1, 2, 3, 4, 5];
 
-function sum() {
-    let sum = 0;
 
-    if (arr[i] === 5) return sum += arr[i]
-    sum++;
-    return sum()
-}
+// function sum(arr_) {
+//     let sum = 0;
+//     for (let i = 0; i < arr_.length; i++) {
+//             sum += arr_[i];
+//             return arr_[i]
+//         } return sum()
+//     }
 
-console.log(sum(arr));
+function sum(arr, n){
+    if( n = 0)
+    return sum (n-1)
+
+};
+
+sum(arr)
+
+

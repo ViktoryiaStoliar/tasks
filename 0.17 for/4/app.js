@@ -4,19 +4,37 @@
 // всех чисел
 
 
-const ar = [2, 4, 6, 8];
-let a = 1;
-let res = ``;
-let sum = ar[i]++;
+const arr = [1, 456, 123, 789, 10];
+let a = prompt();
+let b = 0;
+count = 0;
+let res = ''
 
-for (let i = 1; i < ar.length; i++){
-    if (ar[i] == a){
-        res = `Есть!`  
+for(let i = 0; i < arr.length; i++){
+    if (arr[i] == a){
+        break;
     } else {
-        res += ar[i] / sum;
+        b += arr[i];
+        count++;
+        res = (b/count);
     }
 }
 console.log(res);
+
+
+// const ar = [2, 4, 6, 8];
+// let a = 1;
+// let res = ``;
+// let sum = ar[i]++;
+
+// for (let i = 1; i < ar.length; i++){
+//     if (ar[i] == a){
+//         res = `Есть!`  
+//     } else {
+//         res += ar[i] / sum;
+//     }
+// }
+// console.log(res);
 
 
 

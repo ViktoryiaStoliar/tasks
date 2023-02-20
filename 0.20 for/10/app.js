@@ -4,9 +4,17 @@
 const arr = [1, 2, 2, 3, 4, 4, 3, 4, 5].sort();
 let newarr = [];
 
-for (let i = 0; i < arr.length; i++){
-    if (arr[i] != arr[i + 1] && arr[i] != arr[i - 1])
-newarr.push(arr[i])
+for (let i = 0; i < arr.length; i++) {
+        if (arr[i] != arr[i + 1] && arr[i] != arr[i - 1])
+    newarr.push(arr[i])
 
-}
-console.log(newarr);
+    }
+    console.log(newarr);
+
+//     if (arr[i] == arr[i - 1] && arr[i] == arr[i + 1]) {
+//         continue
+//     } else {
+//         newarr.push(arr[i])                             ?????ПАЧИМУ НЕ РАБОТАЕТ
+//     }
+// }
+// console.log(newarr);

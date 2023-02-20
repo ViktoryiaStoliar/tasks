@@ -9,43 +9,6 @@ for (let i = 1; i <= num; i++){
 }
 console.log(res + ` `);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // const a = 9;
 // for (let i = 0; i <= 3; i++) { 
 //     if(i % 3 ==0 ) {

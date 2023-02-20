@@ -1,14 +1,14 @@
 // 12. Найдите минимальное значение в массиве используя цикл
 
-const ar = [5, 10, -1, 359];
-let res = [0];
+const arr = [1, 123, 456, -123];
+let min = 0;
 
-for (let i = 0; i < ar.length; i++){
-   if (ar[i] < res ) {
-      res = ar[i]
-   }
+for (let i = 0; i < arr.length; i++){
+    if (min > arr[i]){
+        min = arr[i]
+    }
 }
-console.log(res);
+console.log(min);
 
 
 

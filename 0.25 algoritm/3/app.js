@@ -37,16 +37,24 @@
 // }
 // console.log(pow(2, 3));
 
-let arr = [1, 2, 3];
-let b = arr.length;
+// let arr = [1, 2, 3];
+// let b = arr.length;
 
-// console.log(b);
-function sum(arr_, b_) {
-    if (b_ === 0) {
-        return arr_;
-    } else {
-        return b_ + sum(arr_, b_ - 1)
-    }
+// // console.log(b);
+// function sum(arr_, b_) {
+//     if (b_ === 0) {
+//         return arr_;
+//     } else {
+//         return b_ + sum(arr_, b_ - 1)
+//     }
+// }
+
+// console.log(sum(arr, b));
+const arr = [1, 2, 3, 4, 5];
+
+function sum(arr_, a) {
+    if (a == 1)
+    return arr_[0]       //???????
+    return (arr_[0] + sum(a - 1));
 }
-
-console.log(sum(arr, b));
+console.log(sum(arr, arr.length));

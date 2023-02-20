@@ -3,18 +3,37 @@
 // происходить ввод с клавиатуры нового ЧИСЛОВОГО значения (добавить
 // проверку на число). Отобразить в текущей строке только четные элементы
 
-const num = prompt();
+const n = prompt('введите число значений будущей строки');
+let str = '';
 
-let str = ``;
+for (let i = 0; i < n; i++){
+    let a = +prompt('Введите значения строки')
+    if (!isNaN(a) && a % 2 == 0){
+        str +=a
+    }
+}
+console.log(str);
+
+
+
+
+
+
+
+
+
+// const num = prompt();
+
+// let str = ``;
  
-for(let i = 0; i < num; i++){
-    let newValue = prompt();
-    if(!isNaN(newValue)){
-        str += newValue
-    }
-}
-for(let i = 0; i < str.length; i++){
-    if(str[i] % 2 == 0){
-        console.log(str[i]);
-    }
-}
+// for(let i = 0; i < num; i++){
+//     let newValue = prompt();
+//     if(!isNaN(newValue)){
+//         str += newValue
+//     }
+// }
+// for(let i = 0; i < str.length; i++){
+//     if(str[i] % 2 == 0){
+//         console.log(str[i]);
+//     }
+// }

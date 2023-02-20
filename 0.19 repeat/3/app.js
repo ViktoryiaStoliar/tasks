@@ -3,17 +3,30 @@
 // происходить ввод с клавиатуры нового ЧИСЛОВОГО значения (добавить
 // проверку на число). Отобразить в результате только элементы, кот больше 5
 
-const num = +prompt();
+const n = +prompt('Введите колличество символов строки');
 let str = '';
-for(let i = 0; i < num; i++){
-    let newValue = prompt('');
-    if(!isNaN(newValue)){
-        str +=newValue
-    }
-}
 
-for(let i =0; i <str.length; i++){
-    if (str[i] > 5) {
-        console.log(str[i]);
+for (let i = 0; i < n; i++){
+    let a = prompt('введите значения массива')
+    if (!isNaN(a) && a > 5){
+        str += a;
     }
 }
+console.log(str);
+
+
+
+// const num = +prompt();
+// let str = '';
+// for(let i = 0; i < num; i++){
+//     let newValue = prompt('');
+//     if(!isNaN(newValue)){
+//         str +=newValue
+//     }
+// }
+
+// for(let i =0; i <str.length; i++){
+//     if (str[i] > 5) {
+//         console.log(str[i]);
+//     }
+// }

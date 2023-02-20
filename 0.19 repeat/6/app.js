@@ -2,15 +2,23 @@
 // символы в строке
 // hschoolofficial -> hscolfia
 
-// let str = `hschoolofficial`;
-// let res = ``;
+let str = `hschoolofficial`;
+let res = ``;
 
-// for (let i = 0; i < str.length; i++){
-//     if (!res.includes(str[i])){
-//     res += str[i]
+for (let i = 0; i < str.length; i++){
+    if (!res.includes(str[i])){
+    res += str[i]
+    }
+}
+console.log(res);
+
+
+// const str = 'hschoolofficial';
+// let str1 = '';
+
+// for (let i = 0; i < str.length; i++) {
+//     if (!str1.includes(str[i])) {
+//         str1 += str[i]
 //     }
 // }
-// console.log(res);
-
-const a = 43; 
-a % 2 == 0 ? console.log(`${a} - это четное число`) : null
+// console.log(str1);

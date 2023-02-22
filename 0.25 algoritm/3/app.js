@@ -50,8 +50,9 @@
 // }
 
 // console.log(sum(arr, b));
-const arr = [1, 2, 3, 4, 5];
 
+
+const arr = [1, 2, 3, 4, 5];
 function sum(arr_, a) {
     if (a == 1)
     return arr_[0]       //???????

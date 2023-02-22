@@ -11,38 +11,38 @@
 // [5, 1, 2, 3, 0, 1, 5, 0, 2] –> 11 (5 + 1 + 2 + 3 = 11)
 
 
-const arr = [5, 1, 2, 3, 0, 1, 5, 0, 2];
+const arr = [5, 1, 2, 3, 0, 1, 5, 0, 2, 'gjh'];
 function isValid(arr_) {
-    try {
-        if (!Array.isArray(arr_)) {
-            throw new Error('Это не массив');
+    for(let i = 0; i < arr_.length; i++){
+        if (!isNaN(arr_[i])) {
+            return true;
         }
-        return true
-    } catch (error) {
-        return error.message;
     }
 }
-
 
 function sum(arr_) {
-    let bool = isValid(arr_);
-    if (bool === true) {
-        let newArr = [];
-        for (let i = 0; i < arr_.length; i++) {
-            if (arr_[i] === 0) {
-                break;
-            } else {
-                newArr.push(arr_[i]);
+    try{
+        let bool = isValid(arr_);
+        if (bool != true){
+            throw new Error('Проверь первую функцию, это не массив');
+        } else {
+            let newArr = [];
+            for (let i = 0; i < arr_.length; i++) {
+                if (arr_[i] === 0) {
+                    break;
+                } else {
+                    newArr.push(arr_[i]);
+                }
             }
+            // console.log(newArr);
+            const res = newArr.reduce(function(sum, el) {
+                return sum + el;
+            }, 0)
+            return res
         }
-        // console.log(newArr);
-        const res = newArr.reduce(function(sum, el) {
-            return sum + el;
-        }, 0)
-        return res
+    } catch(error) {
+        return error.message
     }
+    
 }
-
-
-const res = sum(arr);
-console.log(res);
+console.log(sum(arr));

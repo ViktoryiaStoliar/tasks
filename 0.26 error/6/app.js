@@ -6,14 +6,14 @@
 // сторона окажется больше либо равна сумме двух других, то треугольника с
 // такими сторонами не существует.
 
-function triangle(a, b, c) {
+// function triangle(a, b, c) {
 
-    for (let i = 0)
-    if (((a + b) > c) || ((b + c) > a) || ((c + a) > b)) {
-        return true
-    } else {
-        return false
-    }
-}
+//     for (let i = 0)
+//     if (((a + b) > c) || ((b + c) > a) || ((c + a) > b)) {
+//         return true
+//     } else {
+//         return false
+//     }
+// }
 
-console.log(triangle(1, 1, 2)); 
+// console.log(triangle(1, 1, 2)); 

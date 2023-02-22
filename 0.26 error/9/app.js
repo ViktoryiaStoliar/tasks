@@ -11,7 +11,7 @@
 // [5, 1, 2, 3, 0, 1, 5, 0, 2] –> 11 (5 + 1 + 2 + 3 = 11)
 
 
-const arr = [5, 1, 2, 3, 0, 1, 5, 0, 2, 'gjh'];
+const arr = [5, 1, 2, 3, 0, 1, 5, 0, 2];
 function isValid(arr_) {
     for(let i = 0; i < arr_.length; i++){
         if (!isNaN(arr_[i])) {

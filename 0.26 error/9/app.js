@@ -34,15 +34,15 @@ function sum(arr_) {
             } else {
                 newArr.push(arr_[i]);
             }
-            const result = newArr.reduce(function (sum, el) {
-                return sum + el
-            }, 0)
         }
+        // console.log(newArr);
+        const res = newArr.reduce(function(sum, el) {
+            return sum + el;
+        }, 0)
+        return res
     }
-    return result
 }
 
 
-const result = sum(arr);
-console.log(newArr); 
-console.log(result);
+const res = sum(arr);
+console.log(res);

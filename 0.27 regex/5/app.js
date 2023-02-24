@@ -15,18 +15,3 @@ function isValid(str_) {
 }
 console.log(isValid(str)); 
 
-// const str = "https://hanna.com";
-
-// function isValid(str_) {
-//   try {
-//     if (!/^(https\:\/\/|http\:\/\/)[a-zA-Z0-9\.]+[a-z]{1,5}$/gm.test(str_))
-//       throw new Error("не подходит");
-//     return true;
-//   } catch (error) {
-//     return error.message;
-//   }
-// }
-
-// let result = isValid(str);
-
-// console.log(result);

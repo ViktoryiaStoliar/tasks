@@ -7,7 +7,7 @@ const str = 'vikynyshka@mail.ru';
 
 function isValid(str_) {
     try {
-        if (!/^[a-zA-z0-9_\-\.]+@[a-z]{1,10}+.[a-z]{1,5}$/gm.test(str_)) throw new Error('неправильно ввели адрес почты')
+        if (!/^[a-zA-Z0-9]+@[a-z]+.[a-z]{1,5}$/gm.test(str_)) throw new Error('неправильно ввели адрес почты')
         return true
     } catch (error) {
         return error.message

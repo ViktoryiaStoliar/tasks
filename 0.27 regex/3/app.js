@@ -9,7 +9,7 @@ function isValid(str_) {
         // if(/^[A-Za-z ]+$/gm.test(str_)){
         let result = str_.replaceAll(/ /gm, '!');
         if (str_.length != result.length) throw new Error('не равно')
-        return true
+        return result
     } catch (error) {
     return error.message
 }

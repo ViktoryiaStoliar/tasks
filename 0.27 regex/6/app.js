@@ -10,7 +10,7 @@ const str = 'C:/Users/Admin/Desktop/test.txt';
 
 function checkStr(str_) {
     try {
-        if (!/^[A-F]+:\/[A-Za-z]+\/[A-Za-z]+\/[A-Za-z]+\/[A-Za-z]+\.+[a-z]{1,3}$/gm.test(str_)) {
+        if (!/^[A-F]+\:\/[A-Za-z]+\/[A-Za-z]+\/[A-Za-z]+\/[A-Za-z]+\.+[a-z]{1,3}$/gm.test(str_)) {
             throw new Error('некорректный ввод')
         } return true
     } catch (error) {

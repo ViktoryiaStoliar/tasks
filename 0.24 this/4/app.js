@@ -22,13 +22,13 @@ function doArr(n_) {
 function maxMinNumber(arr_) {
     let Valid = isValid(arr_);
     if (Valid == true) {
-        let result = '';
+        let result = ``;
         let max = 0;
-        let min = max;
+        let min = 0;
         for (let i = 0; i < arr_.length; i++) {
             if (max < arr_[i]) {
                 max = arr_[i]}
-            ;
+            
             if (min > arr_[i]) {
                 min = arr_[i]
                 console.log(min);

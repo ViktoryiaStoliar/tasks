@@ -17,6 +17,6 @@ function sum(arr, n){
 
 };
 
-sum(arr)
+sum(arr,n)
 
 

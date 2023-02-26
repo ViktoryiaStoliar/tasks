@@ -10,7 +10,6 @@ function isValid(a, b) {
         return true
     }
     else return false
-
 };
 
 function quantity(a, b) {

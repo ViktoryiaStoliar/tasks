@@ -10,8 +10,8 @@
         3 : ''
     }
     let quantity = 0;
-    for (let key in obj)(
+    for (let key in obj){
         quantity++
-    )
+    }
     console.log(quantity);
 } ())

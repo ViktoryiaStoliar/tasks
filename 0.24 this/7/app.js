@@ -2,18 +2,18 @@
 // последующем вызове функции
 
 let Str = 'Vika';
-function str(){
+function str() {
     let NewStr = ' ';
     return () => {
-        NewStr +=Str
-console.log(NewStr);
+        NewStr += Str
+        console.log(NewStr);
     }
- }
- const wrapper = str()
+}
+const wrapper = str()
 
- wrapper()
- wrapper()
- wrapper()
- wrapper()
- wrapper()
- wrapper()
+wrapper()
+wrapper()
+wrapper()
+wrapper()
+wrapper()
+wrapper()

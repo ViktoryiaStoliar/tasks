@@ -2,7 +2,7 @@
 // вы спарсили данные у вас не массив – бросить исключение. Добавить проверку
 // на числа. Далее вывести только те числа, которые кратны 3
 
-const arr = JSON.parse(`[1, 2, 3, "dfs"]`);
+const arr = JSON.parse(`[1, 2, 3]`);
 
 function isValid(arr_) {
     try {
@@ -10,9 +10,9 @@ function isValid(arr_) {
             throw new Error('Это не массив')
         }
         for (let i = 0; i < arr_.length; i++) {
-            if (isNaN(arr_)) throw new Error('не числа')
+            if (!isNaN(arr_)) throw new Error('не числа')
         }
-        const resalt = arr_.filter(function (el) {
+        const res = arr_.filter(function (el) {
             return el % 3 == 0 ? true : false
         })
         return res

@@ -4,21 +4,46 @@
 // то вывести в Результат ряд Фибоначчи. 
 
 const btn = document.querySelector('button')
-let arr = [0, 1];
+let arr = [0, 1]
 const div = document.querySelector('div')
 
 btn.addEventListener('click', function () {
     try {
-        let inp = document.querySelector('input');
-        if (inp.value === '') throw new Error('emply')
-        if (isNaN(inp.value)) throw new Error ('есть буква')
+        let inp = document.querySelector('input')
+        if (inp.value === '') throw new Error('Вы ничего не вввели')
+        if(isNaN(inp.value)) throw new Error ('Есть нечисловое значение')
         for (let i = 2; i < inp.value; i++) {
-            arr.push(arr[i - 1] + arr[i - 2])
+            arr.push((arr[i - 1]) + (arr[i - 2]))
         }
+        div.innerHTML = `Результат ${arr}`
+        inp.value = ''
 
-        div.innerHTML = arr;
-
-    } catch (err) {
-        alert(err.message)
+    } catch (error) {
+        allert(error.message)
     }
 })
+
+
+
+
+
+
+// const btn = document.querySelector('button')
+// let arr = [0, 1];
+// const div = document.querySelector('div')
+
+// btn.addEventListener('click', function () {
+//     try {
+//         let inp = document.querySelector('input');
+//         if (inp.value === '') throw new Error('emply')
+//         if (isNaN(inp.value)) throw new Error ('есть буква')
+//         for (let i = 2; i < inp.value; i++) {
+//             arr.push(arr[i - 1] + arr[i - 2])
+//         }
+
+//         div.innerHTML = arr;
+
+//     } catch (err) {
+//         alert(err.message)
+//     }
+// })

@@ -6,11 +6,7 @@ const btn1 = document.querySelector('.btn1');
 const btn2 = document.querySelector('.btn2');
 
 btn1.addEventListener('click', function(){
-    let inp = document.querySelector('input').readonly
+    btn1.
 })
 
-btn2.addEventListener('click', function(){
-    let inp = document.querySelector('input');
-    inp = 
-})
-
+disabled

@@ -4,9 +4,13 @@
 
 const btn1 = document.querySelector('.btn1');
 const btn2 = document.querySelector('.btn2');
+let inp = document.querySelector('input')
 
 btn1.addEventListener('click', function(){
-    btn1.
+    inp.disabled = true 
+    
 })
 
-disabled
+btn2.addEventListener('click', function(){
+    inp.disabled = false 
+})

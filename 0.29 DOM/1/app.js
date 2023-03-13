@@ -2,11 +2,26 @@
 //  По клику на нее вывести alert с сообщением
 
 
-const btn = document.querySelector('button')
-
-btn.addEventListener('click', function(){
-    alert('Привет!')
+document.querySelector('button').addEventListener('click', function(){
+    alert('Hi')
 })
+
+
+
+
+
+
+
+
+
+
+
+
+// const btn = document.querySelector('button')
+
+// btn.addEventListener('click', function(){
+//     alert('Привет!')
+// })
 
 
 

@@ -6,33 +6,35 @@
 // уникальных значений
 
 const btn = document.querySelector('button');
-let arr = [];
 const inp = document.querySelector('input');
-// let newArr = [];
+let arr = [];
 
-function isValid(inp) {
-    if (inp.value.trim() === '') throw new Error('empty');
-    if (isNaN(inp.value)) throw new Error('it\'s not number')
+function isValid(inp_) {
+    if (inp_.value.trim() === '') throw new Error('empty');
+    if (isNaN(inp_.value)) throw new Error('it\'s not number')
 }
 
 btn.addEventListener('click', function () {
     try {
         let div1 = document.querySelector('.array');
         let div2 = document.querySelector('.uniq');
-
+        
         isValid(inp);
-
+        
         arr.push(inp.value);
         div1.innerHTML = arr;
-
-
-        const newArr = [...new Set(arr)]
-        // for (let i = 0; i < arr.length; i++) {
-        //     if (newArr.includes(arr[i]))
-        //     newArr.push(arr[i])
-        // }
+        
+        
+        let newArr = [];
+        // const newArr = [...new Set(arr)]    2 способ
+        for (let i = 0; i < arr.length; i++) {
+            if (newArr.includes(arr[i])) {
+                continue
+            } else {
+                newArr.push(arr[i])
+            }
+        }
         inp.value = ''
-        console.log(newArr);
         div2.innerHTML = newArr;
     } catch (er) {
         alert(er.message)

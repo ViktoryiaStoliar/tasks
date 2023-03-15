@@ -4,13 +4,13 @@
 // элементов, каждое значение которого имеет вид #name
 
 class Hashtag {
+    arr = [];
 
     doHashtag(n) {
         try {
-
-
-
-
+            for (let i = 0; i < n; i++)
+                this.arr.push(prompt('введите элемент типа #name'));
+            return this.arr
         } catch (er) {
             return er.message
         }
@@ -19,3 +19,4 @@ class Hashtag {
 
 const hashtag = new Hashtag();
 const res = hashtag.doHashtag(5);
+console.log(res);

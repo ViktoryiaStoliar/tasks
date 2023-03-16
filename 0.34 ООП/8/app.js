@@ -18,3 +18,22 @@ const validator = new Validator();
 
 const bool = validator.isEmail('vikynyshka@mail.ru');
 console.log(bool);
+
+
+// class Validator {
+//     string;
+
+//     isEmail() {
+//         try {
+//             if (!/^[\w]{8,}@[a-z]+.[a-z]{1,5}$/gm.test(this.string)) throw new Error('dfvnsdbfn');
+//             return true
+//         } catch (error) {
+//             return error.message
+//         }
+//     }
+// }
+
+// const validator = new Validator();
+// validator.string = 'vikynyshka@mail.ru';
+// const res = validator.isEmail();
+// console.log(res);

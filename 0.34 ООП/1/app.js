@@ -1,52 +1,57 @@
-// <!-- 2. Реализуйте класс Calculator, который будет хранить в себе 4 метода: сумма чисел,
-// разность, произведение, частное. 2 числа передаются в класс, далее вызываеются
-// соответствующие функции. Добавить проверки на ввод -->
+// 1. Реализуйте класс Singer, который будет иметь следующие свойства: name,
+// surname. Также класс должен иметь метод getAutograph, который будет выводить
+// “{name} {surname), с наилучшими пожеланиями”.
 
+// class Singer {
+//     name;
+//     surname;
 
-// class Calculator {
-
-//     doPlus(num1, num2) {
-//         console.log(num2 + num1);
-//      }
-
-//     doMinus(num1, num2) {
-//         console.log(num2 - num1);
-//      }
-
-//     doMultiplay(num1, num2) {
-//         console.log(num2 * num1);
-//      }
+//     getAutograph() {
+//         try {
+//             return (`${this.name} ${this.surname}, с найлучшими пожеланиями`);
+//         } catch (er) {
+//             return er.message
+//         }
+//     }
 // }
 
-// const calculator = new Calculator();
+// const singer = new Singer();
+// singer.name = 'Vika';
+// singer.surname = 'Stoliar'
+// const res = singer.getAutograph();
+// console.log(res);
 
-// calculator.doPlus(1, 2);
-// calculator.doMinus(2, 1);
-// calculator.doMultiplay(1,113)
+// class Singer {
 
-class Calculator {
+//     constructor(name, surname) {
+//         this.name = name;
+//         this.surname = surname;
+//     }
 
-    num1;
-    num2;
+//     getAutograph() {
+//         try {
+//             return (`${this.name} ${this.surname}, с найлучшими пожеланиями`);
+//         } catch (er) {
+//             return er.message
+//         }
+//     }
+// }
 
-    doPlus(){
-        console.log(this.num1 + this.num2);
-    };
+// const singer = new Singer('Vika', 'Stoliar');
+// const res = singer.getAutograph();
+// console.log(res);
 
-    doMinus(){
-        console.log(this.num2 - this.num1);
-    };
+class Singer {
 
-    doMultiplay(){
-        console.log(this.num1 * this.num2);
-    };
-
+    getAutograph(name, surname) {
+        try {
+            return `${name} ${surname}, с наилучшими пожеланиями`
+        } catch (er) {
+            return er.message
+        }
+    }
 }
-const calculator = new Calculator()
 
-calculator.num1 = 10;
-calculator.num2 = 5;
-
-calculator.doPlus();
-calculator.doMinus();
-calculator.doMultiplay();
+const singer = new Singer();
+const res = singer.getAutograph('Vika', 'Stoliar');
+console.log(res);

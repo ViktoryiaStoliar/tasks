@@ -76,48 +76,48 @@ console.log(arrDB.push(c));
 //      if (resFilter.includes(d['id'])) arrDB.push(d['id'])
 //      else console.log("ошибка");
 //      console.log(arrDB);
-const arrDB = [
-    { "id": "javascript", "label": "JavaScript", "category": "programmingLanguages", "priority": 1 },
-    { "id": "typescript", "label": "TypeScript", "category": "programmingLanguages", "priority": 1 },
-    { "id": "sql", "label": "SQL", "category": "programmingLanguages", "priority": 2 },
-    { "id": "java", "label": "Java", "category": "programmingLanguages", "priority": 3 },
-    { "id": "go", "label": "GO", "category": "programmingLanguages", "priority": 3 },
-];
+// const arrDB = [
+//     { "id": "javascript", "label": "JavaScript", "category": "programmingLanguages", "priority": 1 },
+//     { "id": "typescript", "label": "TypeScript", "category": "programmingLanguages", "priority": 1 },
+//     { "id": "sql", "label": "SQL", "category": "programmingLanguages", "priority": 2 },
+//     { "id": "java", "label": "Java", "category": "programmingLanguages", "priority": 3 },
+//     { "id": "go", "label": "GO", "category": "programmingLanguages", "priority": 3 },
+// ];
 
-let a = {"label": "test", "category": "test", "priority": 1 };   // 2. Create
+// let a = {"label": "test", "category": "test", "priority": 1 };   // 2. Create
 
-let result = arrDB.find(i => i.label == "Test");  //метод find
-if (arrDB != result) {
-    arrDB.push(a)
-}
-console.log(arrDB);
+// let result = arrDB.find(i => i.label == "Test");  //метод find
+// if (arrDB != result) {
+//     arrDB.push(a)
+// }
+// console.log(arrDB);
 
-console.log(arrDB);     //объекты
-for (let key in arrDB){
-    console.log(key);
-    console.log(arrDB[key]);
-}
+// console.log(arrDB);     //объекты
+// for (let key in arrDB){
+//     console.log(key);
+//     console.log(arrDB[key]);
+// }
 
-let resultFilter = arrDB.filter(el => el.label === a.label); //методом Filter
-if (resultFilter.length === 0) arrDB.push(a)
-else console.log('ошибка');
-// console.log(resultFilter);
-console.log(arrDB);   // 1. Read
+// let resultFilter = arrDB.filter(el => el.label === a.label); //методом Filter
+// if (resultFilter.length === 0) arrDB.push(a)
+// else console.log('ошибка');
+// // console.log(resultFilter);
+// console.log(arrDB);   // 1. Read
 
-let b = {id :'test' };
-let c = {...b, ...a};
-// console.log(c);
-console.log(arrDB.push(c));
+// let b = {id :'test' };
+// let c = {...b, ...a};
+// // console.log(c);
+// console.log(arrDB.push(c));
 
-// let d = {"id" : "test" , "label": "Test", "category": "test", "priority": 1 }   // 3. Update
+// // let d = {"id" : "test" , "label": "Test", "category": "test", "priority": 1 }   // 3. Update
 
-// let resFilter = arrDB.filter((i) {
-//     return i.id === 'test'
-// });
+// // let resFilter = arrDB.filter((i) {
+// //     return i.id === 'test'
+// // });
 
-//      if (resFilter.includes(d['id'])) arrDB.push(d['id'])
-//      else console.log("ошибка");
-//      console.log(arrDB);
+// //      if (resFilter.includes(d['id'])) arrDB.push(d['id'])
+// //      else console.log("ошибка");
+// //      console.log(arrDB);
 
 let arr = arrDB.filter(i => i.id == "java")  // 4. Delate
 // for (let i in arrDB){

@@ -1,89 +1,60 @@
-// 6. Реализуйте класс ServerGetAll. Обязательными функциями считаются функции
-// controller, service, repository. Цепочка взаимодействия между методами
+// 6. Реализуйте класс ServerPut. Обязательными функциями считаются функции
+// middleware, controller, service, repository. Цепочка взаимодействия между методами
 // следующая:
-// controller -> service -> repository, где:
+// middleware -> controller -> service -> repository, где:
+// middleware – функция валидатор
 // controller – функция, принимающая данные. Принимает json
 // service – функция проверки на то что с repository вернулось значение
 // repository – функция, симулирующая БД. Хранит массив данных. Взаимодействие с
-// этим массивом осуществляется только в repository. Массив находится в
-// приложении
+// этим массивом осуществляется только в repository. Массив находится в приложении
 // Задание:
-// Необходимо вывести в консоль весь массив
+// на вход подается JSON вида:
+// `{
+// "id": 1, "name": "Test", "age": 1
+// }`
+// Необходимо найти id клиента в массиве БД. Если совпадение есть, произвести
+// обновление значений для соответствующих ключей.
+// Если совпадения по id нет – ошибка. Добавить проверки 
 
-class ServerGetAll {
+class ServerPut {
 
-    controller() {
+    controller(data) {
         try {
-            const serv = this.service();
+            const serv = this.service(data);
             return serv
-        } catch (er) {
-            return er.message
+        } catch (error) {
+            return error.message
         }
     }
 
-    service() {
-        const rep = this.repository();
-        return rep;
+    service(data) {
+        const rep = this.repository(data);
+        return rep
     }
 
-    repository() {
+    repository(data) {
         const arr = [
-            { "id": "javascript", "label": "JavaScript", "category": "programmingLanguages", "priority": 1 },
-            { "id": "typescript", "label": "TypeScript", "category": "programmingLanguages", "priority": 1 },
-            { "id": "sql", "label": "SQL", "category": "programmingLanguages", "priority": 2 },
-            { "id": "java", "label": "Java", "category": "programmingLanguages", "priority": 3 },
-            { "id": "go", "label": "GO", "category": "programmingLanguages", "priority": 3 }
-        ]
-
-        return arr
+            { "id": 1, "name": "Yesenia", "age": 22 },
+            { "id": 2, "name": "Hanna", "age": 22 },
+            { "id": 3, "name": "Stanislau", "age": 25 },
+            { "id": 4, "name": "German", "age": 18 },
+            { "id": 5, "name": "Maria", "age": 27 },
+        ];
+        const findEl = arr.filter(el => el.id === data.id)
+        // console.log(findEl);
+        if (findEl.length > 0) {
+            arr[0] = data
+        } else {
+            throw new Error('coincidence')
+        }
+        return arr;
     }
-
 }
 
-const servergetAll = new ServerGetAll();
+const data = JSON.parse(`{
+    "id": 1, "name": "Test", "age": 1
+    }`);
 
-const res = servergetAll.controller();
-console.log(res);
-
-
-
-
-
-
-
-
-
-
-
-// class ServerGetAll {
-
-//     controller() {
-//         try {
-//             const serv = this.service()
-//             return serv
-//         } catch (error) {
-//             return error.message
-//         }
-//     }
-
-//     service() {
-//         const rep = this.repository()
-//         return rep
-//     }
-
-//     repository() {
-//         const arr = [
-//             { "id": "javascript", "label": "JavaScript", "category": "programmingLanguages", "priority": 1 },
-//             { "id": "typescript", "label": "TypeScript", "category": "programmingLanguages", "priority": 1 },
-//             { "id": "sql", "label": "SQL", "category": "programmingLanguages", "priority": 2 },
-//             { "id": "java", "label": "Java", "category": "programmingLanguages", "priority": 3 },
-//             { "id": "go", "label": "GO", "category": "programmingLanguages", "priority": 3 }
-//         ]
-
-//         return arr
-//     }
-// }
-
-// const servergetAll = new ServerGetAll();
-// const res = serve○rgetAll.controller()
-// console.log(res);
+const serverPut = new ServerPut();
+const result = serverPut.controller(data);
+console.log(result);

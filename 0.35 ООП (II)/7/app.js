@@ -1,100 +1,59 @@
-// 7. Реализуйте класс ServerById. Обязательными функциями считаются функции
-// middleware, controller, service, repository. Цепочка взаимодействия между
-// методами следующая:
+// 7. Реализуйте класс ServerDelete. Обязательными функциями считаются функции
+// middleware, controller, service, repository. Цепочка взаимодействия между методами
+// следующая:
 // middleware -> controller -> service -> repository, где:
 // middleware – функция валидатор
 // controller – функция, принимающая данные. Принимает json
 // service – функция проверки на то что с repository вернулось значение
 // repository – функция, симулирующая БД. Хранит массив данных. Взаимодействие с
-// этим массивом осуществляется только в repository. Массив находится в
-// приложении
+// этим массивом осуществляется только в repository. Массив находится в приложении
 // Задание:
 // на вход подается JSON вида:
 // `{
-// "id": "javascript"
+// "id": 1
 // }`
-// Необходимо вывести в консоль найденный элемент массива по id если таковой
-// имеется. В противном случае бросить исключение. Добавить проверки 
+// Необходимо осуществить удаление по id. Если совпадения нет – ошибка. Добавить
+// проверки 
 
-class ServerById {
-    middleware() {
+class ServerDelete {
 
-    }
-    controller(obj) {
+    controller(data) {
         try {
-            const serv = this.service(obj);
+            const serv = this.service(data);
             return serv
-
         } catch (error) {
             return error.message
         }
     }
 
-    service(obj) {
-        const rep = this.repository(obj);
+    service(data) {
+        const rep = this.repository(data);
         return rep
     }
 
-    repository(obj) {
+    repository(data) {
         const arr = [
-            { "id": "javascript", "label": "JavaScript", "category": "programmingLanguages", "priority": 1 },
-            { "id": "typescript", "label": "TypeScript", "category": "programmingLanguages", "priority": 1 },
-            { "id": "sql", "label": "SQL", "category": "programmingLanguages", "priority": 2 },
-            { "id": "java", "label": "Java", "category": "programmingLanguages", "priority": 3 },
-            { "id": "go", "label": "GO", "category": "programmingLanguages", "priority": 3 }
+            { "id": 1, "name": "Yesenia", "age": 22 },
+            { "id": 2, "name": "Hanna", "age": 22 },
+            { "id": 3, "name": "Stanislau", "age": 25 },
+            { "id": 4, "name": "German", "age": 18 },
+            { "id": 5, "name": "Maria", "age": 27 },
         ];
-        const filter = arr.filter((el) => el.id === obj.id ? true : null)
-        // const bool = obj.hasOwnProperty('id')
-        return filter
+        const findEl = arr.filter(el => el.id != data.id)
+        // console.log(findEl);
+        if (findEl.length === 0) {
+            arr.push(data)
+        } else {
+            throw new Error('coincidence')
+        }
+        return arr;
     }
 }
 
-const obj = {
-    id: "javascript"
-}
+const data = JSON.parse(`{
+    "id": 1
+    }`);
 
-const serverbyId = new ServerById();
-const res = serverbyId.controller(obj);
-console.log(res);
-
-
-
-
-// class ServerById {
-//     middleware() { };
-//     controller(obj) {
-//         try {
-//             const serv = this.service(obj);
-//             return serv
-//         } catch (error) {
-//             return error.message
-//         }
-//     };
-//     service(obj) {
-//         const rep = this.repository(obj);
-//         return rep
-//     };
-//     repository(obj) {
-//         const arr = [
-//             { "id": "javascript", "label": "JavaScript", "category": "programmingLanguages", "priority": 1 },
-//             { "id": "typescript", "label": "TypeScript", "category": "programmingLanguages", "priority": 1 },
-//             { "id": "sql", "label": "SQL", "category": "programmingLanguages", "priority": 2 },
-//             { "id": "java", "label": "Java", "category": "programmingLanguages", "priority": 3 },
-//             { "id": "go", "label": "GO", "category": "programmingLanguages", "priority": 3 }
-//         ];
-
-//         const filter = arr.filter((el) => (el.id == obj.id ? true : null));
-
-//         return filter
-
-//     }
-// }
-
-
-// let obj = {
-//     id: "javascript"
-// }
-
-// const serverbyId = new ServerById();
-// const res = serverbyId.controller(obj);
-// console.log(res);
+const serverDelete = new ServerDelete();
+const result = serverDelete.controller(data);
+console.log(result);

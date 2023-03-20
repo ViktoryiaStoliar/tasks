@@ -51,7 +51,7 @@ class ServerPost {
         if (!filterArr.length === 0) {
             throw new Error('такой уже есть')
         } else {
-            arr.push({id: obj.label.toLowerCase(), ...obj});
+            arr.push(id: obj.label.toLowerCase(), ...obj);
         }
         return arr
     }

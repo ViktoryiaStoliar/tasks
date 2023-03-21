@@ -18,8 +18,14 @@
 
 class ServerById {
 
+    middleware(data) {
+        if(!data.hasOwnProperty("id")) throw new Error ('нет поля id')
+        if(isNaN(data.id)) throw new Error ('littera')
+    }
+
     controller(data) {
         try {
+            this.middleware()
             const serv = this.service(data);
             return serv
         } catch (error) {

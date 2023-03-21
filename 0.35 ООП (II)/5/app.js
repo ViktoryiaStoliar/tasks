@@ -19,9 +19,15 @@
 // Если совпадение есть – ошибка. Добавить проверки 
 
 class ServerPost {
+    middleware(data) {
+        if (!isNaN(data.name)) throw new Error('number');
+        if (isNaN(data.age)) throw new Error('littera');
+        if(!data.hasOwnProperty('name') || !data.hasOwnProperty('age')) throw new Error ('некорректные данные')
+    }
 
     controller(data) {
         try {
+            this.middleware(data)
             const serv = this.service(data);
             return serv
         } catch (error) {
@@ -47,7 +53,7 @@ class ServerPost {
         if (findEl.length > 0) {
             throw new Error('coincidence')
         } else {
-            arr.push({'id':6,...data})
+            arr.push({ 'id': arr.length + 1, ...data })
         }
         return arr;
     }

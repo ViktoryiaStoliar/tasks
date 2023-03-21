@@ -40,14 +40,12 @@ class ServerPut {
             { "id": 4, "name": "German", "age": 18 },
             { "id": 5, "name": "Maria", "age": 27 },
         ];
-        const findEl = arr.filter(el => el.id === data.id)
+        const findEl = arr.filter(el => el.id != data.id)
         // console.log(findEl);
-        if (findEl.length > 0) {
-            arr[0] = data
-        } else {
-            throw new Error('coincidence')
-        }
-        return arr;
+        if (findEl.length === arr.length) throw new Error('нет такого id')
+        findEl.push(data)
+
+        return findEl;
     }
 }
 

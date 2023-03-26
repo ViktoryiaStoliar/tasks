@@ -6,8 +6,10 @@
 // методы getFullName , getMoreInfo через класс Singer
 
 class Worker {
+    
     name;
     surname;
+
     getFullName() {
         return `Имя: ${this.name} Фамилия: ${this.surname}`
     }
@@ -19,9 +21,11 @@ class Worker {
 }
 
 class Singer extends Worker {
+
     years;
     birth;
     style;
+
     getMoreInfo() {
         return `Возрост: ${this.years} День Рождение: ${this.birth} Стиль:${this.style}`
     }

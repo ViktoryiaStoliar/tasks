@@ -5,31 +5,60 @@
 // класса и записать в переменную используя метод super. Далее дополняем
 // переопределенный метод отображением результата в console
 
+// class Pwd {
+//     showPwd() {
+//         let arr = [];
+//         for (let i = 0; i < 8; i++) {
+//             arr.push(Math.round(Math.random() * 9))
+//         }
+//         return arr.join('')
+//     }
+// }
+
+// class Validation extends Pwd {
+//     isValid(pwd){
+//         if(isNaN(pwd)) throw new Error ('not a number')
+//     }
+
+//     showPwd() {
+//         try{
+//             const pwd = super.showPwd();
+//             this.isValid(pwd)
+//             console.log(pwd);
+//         } catch (er){
+//             console.log(er.message);
+//         }
+//     }
+// }
+
+// const validation = new Validation();
+// validation.showPwd()
 class Pwd {
+    n = 8;
     showPwd() {
-        let arr = [];
-        for (let i = 0; i < 8; i++) {
-            arr.push(Math.round(Math.random() * 9))
+        const pwd = [];
+        for (let i = 0; i < this.n; i++) {
+            pwd.push(Math.round(Math.random() * 10))
         }
-        return arr.join('')
+        return pwd.join('');
     }
-}
-
+};
 class Validation extends Pwd {
-    isValid(pwd){
-        if(isNaN(pwd)) throw new Error ('not a number')
+    isValid(pwd) {
+        if(isNaN(pwd)){
+            throw new Error ('empty')
+        }
     }
 
     showPwd() {
-        try{
+        try {
             const pwd = super.showPwd();
-            this.isValid(pwd)
             console.log(pwd);
-        } catch (er){
-            console.log(er.message);
+
+        } catch (error) {
+            console.log(error.message);
         }
     }
 }
-
 const validation = new Validation();
-validation.showPwd()
+validation.showPwd();

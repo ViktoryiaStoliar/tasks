@@ -1,8 +1,11 @@
 // 6. При наведении на картинку изменять ее
-const img1 = document.querySelector('.src="./img/1.jpg"')
-const img2 = document.querySelector('.src="./img/2.jpg"')
+const img = document.querySelector('img')
 
-img1.addEventListener('mouseover', (){
 
-    
+img.addEventListener('mouseover', () => {
+    img.src = "./img/2.jpg"
+})
+
+img.addEventListener('mouseout', () => {
+    img.src="./img/1.jpg"
 })

@@ -60,10 +60,10 @@ class Client {
             const pwd = document.querySelector('.password');
             const email = document.querySelector('.email');
             const div = document.querySelector('div')
-            const dataForServer = {
-                email: email.value,
-                pwd: pwd.value
-            }
+            // const dataForServer = {
+            //     email: email.value,
+            //     pwd: pwd.value
+            // }
             const server = new Server();
             const res = server.controller({ email: email.value, pwd: pwd.value })
             div.innerHTML = JSON.stringify(res)

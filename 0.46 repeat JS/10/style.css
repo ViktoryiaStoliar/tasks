@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-style: normal;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #454545;
+}
+
+.wrapper{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.songCover{
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: auto;
+}
+
+.artist{
+    display: flex;
+    justify-content: center;
+    margin: auto; 
+}
+
+.NameOfSong{
+    display: flex;
+    justify-content: center; 
+    margin: auto;
+}
+
+.player {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 120px;
+    margin: auto;
+}
+
+
+.back {
+    background-image: url(./assets/LeftBtn.png);
+    width: 35px;
+    height: 35px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.play {
+    background-image: url(./assets/playBtn.png);
+    width: 35px;
+    height: 35px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.next {
+    background-image: url(./assets/nextBtn.png);
+    width: 35px;
+    height: 35px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}

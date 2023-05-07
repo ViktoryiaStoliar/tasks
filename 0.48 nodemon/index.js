@@ -1,43 +1,62 @@
 const express = require('express');
-const { getAllData, getById, createData, upDateData } = require('./service.js');
+const { getArr, getById, postData, putData, deleteData } = require('./service');
 const bodyParser = require('body-parser');
 
 const app = express();
 
 app.use(bodyParser.json());
 
-// 3. Добавить 2 обработчика маршрута: get, post
-app.get('/', (request, response) => {
-    const data = getAllData();
-    response.send(data)
-});
-
-app.get('/:id', (request, response) => {
-    const { id } = request.params;
-    const data = getById(id);
-    response.send(data)
-});
-
-app.post('/', (request, response) => {
-    const { name, age } = request.body;
-    const data = createData(name, age);
-    response.send(data)
-})
-
-app.put('/:id', (request, response) => {
-    const {id} = request.params;
-    const {name, age} = request.body;
-    const data = upDateData(id, name, age);
-    response.send(data)
-} )
-
-app.listen(3000, () => {
-    console.log('Server is running on port 3000');
-})
-
-
-
 // 4. На сервере есть файл сервисов. В нем глобально хранится массив. Прописать
 // логику так, чтобы при get запросе отправлялся ответ клиенту с массивом внутри
 // тела
+// app.get('/user/', (req, res) => {
+//     const data = getArr();
+//     res.json(data)
+// });
 
+// 5. На сервере есть файл сервисов. В нем глобально хранится массив объектов.
+// Прописать логику так, чтобы при get запросе отправлялся ответ клиенту с
+// массивом внутри тела и статус ответа
+// app.get('/user/', (req, res) => {
+//     const data = getArr();
+//     res.status(200).json(data)
+// });
+
+// 6. Добавить 1 обработчик маршрута: get с url “/:id”. На сервере есть файл сервисов. В
+// нем глобально хранится массив объектов. Прописать логику так, чтобы при get
+// запросе отправлялся ответ клиенту с объектом, id которого совпадает с
+// запрашиваемым id, статус ответа
+// app.get('/user/:id', (req, res) => {
+//     const {id} = req.params;
+//     const data = getById(id);
+//     res.status(200).json(data)
+// })
+
+// 7. Для post запроса добавить добавление тела запроса в массив и возвращать
+// обновленный массив, статус ответа
+// app.post('/user/', (req, res) => {
+//     const { name, age } = req.body;
+//     const data = postData(name, age);
+//     res.status(200).json(data)
+// })
+
+// 8. Добавить 2 обработчика маршрута: put, delete
+// 9. Для put с url “/:id” запроса добавить обновление массива по id и возвращать
+// обновленный массив, статус ответа
+// app.put('/user/:id', (req, res) => {
+//     const { id } = req.params;
+//     const {name, age} = req.body;
+//     const newData = putData(id, name, age);
+//     res.status(200).json(newData)
+// })
+
+// 10. Для delete с url “/:id” удалять по id элемент массива
+app.delete('/user/:id', (req, res) => {
+    const { id } = req.params;
+    const data = deleteData(id);
+    res.status(200).json(data)
+})
+
+app.listen(3000, () => {
+    console.log('server is running');
+})

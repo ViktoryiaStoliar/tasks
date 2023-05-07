@@ -6,34 +6,41 @@ const arr = [
     { "id": 5, "name": "Maria", "age": 27 }
 ];
 
-function getAllData() {
+const getArr = () => {
     return arr
-};
+}
 
 function getById(id) {
     const filtered = arr.filter((el) => el.id == id)
     return filtered
 }
 
-function createData(name, age) {
-    const newObj = {
-        name: name,
-        age: age
+function postData(name, age) {
+    const obj = {
+        "name": name,
+        "age": age
     }
-    arr.push(newObj);
+    arr.push(obj)
     return arr
 }
 
-function upDateData(id, name, age) {
-    const filtered = arr.filter((el) => el.id != id);
-    if (filtered.length === arr.length) return 'id not found';
-    const newObj = {
-        id: id,
-        name: name,
-        age: age
+function putData(id, name, age) {
+    const filtered = arr.filter((el) => el.id != id)
+    if (filtered.length === arr.length) return ('такого id нет')
+    const obj =
+    {
+        "id": id,
+        "name": name,
+        "age": age
     }
-    filtered.push(newObj)
+    filtered.push(obj)
     return filtered
 }
 
-module.exports = { getAllData, getById, createData,  upDateData};
+function deleteData(id) {
+    const filtered = arr.filter((el) => el.id != id)
+    if (filtered.length === arr.length) return ('такого id нет')
+    return filtered
+}
+
+module.exports = { getArr, getById, postData, putData, deleteData }

@@ -56,6 +56,12 @@ class Client {
     }
 }
 
+МА5107940 с 07.07.22 по 06.07.23
++375172062014 пункт про данные контактные страховщика
+
+
+
+
 const client = new Client();
 client.sendRequest()
 

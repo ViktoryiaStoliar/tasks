@@ -20,14 +20,14 @@ function getAllEnvaroment() {
 }
 
 function getEnvironmentById(id) {
-    if (!arr.length) throw new Error('empty')
+    if (!filtered.length) throw new Error('empty')
     const filtered = arr.filter((el) => el.id == id)
     return filtered
 }
 
 function createEnvironment(label, category, priority) {
     const filtered = arr.filter((el) => el.label == label)
-    if (filtered, length > 0) throw new Error('this label alresdy exsist')
+    if (filtered.length > 0) throw new Error('this label alresdy exsist')
     const obj = {
         id: arr.length + 1,
         label: label,

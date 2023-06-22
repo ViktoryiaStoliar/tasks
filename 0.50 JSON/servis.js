@@ -51,7 +51,7 @@ function uppdateData(id, label, category, priority) {
         "category": category,
         "priority": priority
     }
-    if (filtered.length > 0) arr.push(obj)
+    // if (filtered.length > 0) arr.push(obj)
     return arr
 }
 

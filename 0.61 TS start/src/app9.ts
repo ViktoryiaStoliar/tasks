@@ -1,6 +1,11 @@
 // 9. Напишите программу, которая находит и выводит наиболее часто встречающийся
 // символ в заданной строке.
 
-const str_: string = 'VIKTORIYA'
+let str_: string = `askfgljhgaljhwe`
+console.log(str_);
 
-let littera: string = ''
+
+
+
+
+

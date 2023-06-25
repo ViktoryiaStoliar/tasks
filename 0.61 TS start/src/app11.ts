@@ -3,10 +3,9 @@
 
 const anagram: string | string[] = 'карп'.split('')
 
-for (let i = 0; i < anagram.length; i++){
-    if(anagram.sort().length === anagram.length){
+for (let i = 0; i < anagram.length; i++) {
+    if (anagram.sort().length === anagram.length) {
         console.log(true);
-        
     }
 }
 

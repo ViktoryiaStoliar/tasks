@@ -3,4 +3,9 @@
 // 4 –>****
 // ***
 // **
-// *
+// * 
+const n: number = 4;
+for (let i = n; i > 0; i--) {
+    let a: any = '*'
+    console.log(a.repeat(i));
+}

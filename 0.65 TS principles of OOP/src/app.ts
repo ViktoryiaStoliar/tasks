@@ -172,55 +172,89 @@
 // (хначение инициализируется через конструктор класса), методы getAverage,
 // getMax, getMin для вычисления среднего значения, максимального и
 // минимального элементов массива.
-interface iArray {
-    array: number[];
-    getAverage(): number;
-    getMax(): number;
-    getMin(): number;
-    getArray(): number[];
-}
+// {interface iArray {
+//     array: number[];
+//     getAverage(): number;
+//     getMax(): number;
+//     getMin(): number;
+//     getArray(): number[];
+// }
 
-class ArrayAnalyzer {
-    public array: number[] = [];
+// class ArrayAnalyzer {
+//     public array: number[] = [];
 
-    constructor(num: number) {
-        for (let i = 0; i < num; i++) {
-            this.array.push(Math.round(Math.random() * 10))
-        }
-    }
-    getArray(): number[] {
-        return this.array
-    }
+//     constructor(num: number) {
+//         for (let i = 0; i < num; i++) {
+//             this.array.push(Math.round(Math.random() * 10))
+//         }
+//     }
+//     getArray(): number[] {
+//         return this.array
+//     }
 
-    getAverage(): number {
-        const aver = this.array.reduce((sum, el) => {
-            return el + sum
-        }, 0)
-        return aver / this.array.length
-    }
-    getMax(): number {
-        const max = Math.max(...this.array)
-        return max
-    }
-    getMin(): number {
-        const min = Math.min(...this.array);
-        return min
-    }
-}
+//     getAverage(): number {
+//         const aver = this.array.reduce((sum, el) => {
+//             return el + sum
+//         }, 0)
+//         return aver / this.array.length
+//     }
+//     getMax(): number {
+//         const max = Math.max(...this.array)
+//         return max
+//     }
+//     getMin(): number {
+//         const min = Math.min(...this.array);
+//         return min
+//     }
+// }
 
-const arrayAnalyzer: iArray = new ArrayAnalyzer(10);
-console.log(arrayAnalyzer.getAverage());
-console.log(arrayAnalyzer.getArray());
+// const arrayAnalyzer: iArray = new ArrayAnalyzer(10);
+// console.log(arrayAnalyzer.getAverage());
+// console.log(arrayAnalyzer.getArray());
 
-console.log(arrayAnalyzer.getMax());
-console.log(arrayAnalyzer.getMin());
+// console.log(arrayAnalyzer.getMax());
+// console.log(arrayAnalyzer.getMin());}
 
 // 7. Создайте класс StringManipulator, который будет иметь методы reverseString(str:
 // string), isPalindrome(str: string), countVowels(str: string). Реализуйте функционал для
 // разворота строки, проверки, является ли строка палиндромом, и подсчета
 // гласных букв в строке. Использовать Generics
+interface iStringManipulator {
+    str: string;
+    reverseString(): string;
+    isPalindrome(): string;
+    countVowels(): string;
+}
 
+class StringManipulator {
+    str: string = 'TENET';
+    reverseString() {
+        const reversed = this.str.split(' ').reverse().join(' ')
+        return reversed
+    }
 
+    isPalindrome() {
+        const reversed = this.str.split(' ').reverse().join(' ')
+        if (this.str === reversed) {
+            return 'палиндром'
+        }
+    }
+
+    countVowels() {
+        let count = 0;
+        for (let i = 0; i < this.str.length; i++) {
+            if (this.str[i].toLowerCase().includes("a" || "e" || "u" || "i" || "o")) {
+                count += 1
+            }
+        }
+        return count
+    }
+}
+
+const stringManipulator = new StringManipulator();
+console.log(stringManipulator.reverseString());
+console.log(stringManipulator.isPalindrome());
+console.log(stringManipulator.countVowels());
 
 // 8. Создайте класс PasswordGenerator, который будет иметь метод
 // generatePassword(length: number), позволяющий генерировать случайные

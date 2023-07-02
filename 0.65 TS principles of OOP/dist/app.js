@@ -3,40 +3,34 @@
 // реализует метод calculateArea() для расчета площади прямоугольника. Затем
 // создайте объект класса Rectangle и выведите его площадь на экран. (для
 // вычисления площади прямоугольника S = height * wigth)
-class ArrayAnalyzer {
-    constructor(num) {
-        this.array = [];
-        for (let i = 0; i < num; i++) {
-            this.array.push(Math.round(Math.random() * 10));
+class StringManipulator {
+    constructor() {
+        this.str = 'TENET';
+    }
+    reverseString() {
+        const reversed = this.str.split(' ').reverse().join(' ');
+        return reversed;
+    }
+    isPalindrome() {
+        const reversed = this.str.split(' ').reverse().join(' ');
+        if (this.str === reversed) {
+            return 'палиндром';
         }
     }
-    getArray() {
-        return this.array;
-    }
-    getAverage() {
-        const aver = this.array.reduce((sum, el) => {
-            return el + sum;
-        }, 0);
-        return aver / this.array.length;
-    }
-    getMax() {
-        const max = Math.max(...this.array);
-        return max;
-    }
-    getMin() {
-        const min = Math.min(...this.array);
-        return min;
+    countVowels() {
+        let count = 0;
+        for (let i = 0; i < this.str.length; i++) {
+            if (this.str[i].toLowerCase().includes("a" || "e" || "u" || "i" || "o")) {
+                count += 1;
+            }
+        }
+        return count;
     }
 }
-const arrayAnalyzer = new ArrayAnalyzer(10);
-console.log(arrayAnalyzer.getAverage());
-console.log(arrayAnalyzer.getArray());
-console.log(arrayAnalyzer.getMax());
-console.log(arrayAnalyzer.getMin());
-// 7. Создайте класс StringManipulator, который будет иметь методы reverseString(str:
-// string), isPalindrome(str: string), countVowels(str: string). Реализуйте функционал для
-// разворота строки, проверки, является ли строка палиндромом, и подсчета
-// гласных букв в строке. Использовать Generics
+const stringManipulator = new StringManipulator();
+console.log(stringManipulator.reverseString());
+console.log(stringManipulator.isPalindrome());
+console.log(stringManipulator.countVowels());
 // 8. Создайте класс PasswordGenerator, который будет иметь метод
 // generatePassword(length: number), позволяющий генерировать случайные
 // безопасные пароли заданной длины.

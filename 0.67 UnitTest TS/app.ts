@@ -89,7 +89,7 @@ class NumberArray {
     arr: number[] = [1, 2, 3, 4, 5];
 
     getSum(): number {
-        const sum:number = this.arr.reduce((sum, el) => {
+        const sum: number = this.arr.reduce((sum, el) => {
             return sum + el
         }, 0)
         return sum
@@ -106,4 +106,29 @@ class NumberArray {
     }
 }
 
-export { isPalindrome, calculateFactorial, capitalizeString, StringArray, NumberArray }
+// 11. Создайте класс StringManipulator, который имеет свойство text (строка) и методы:
+// getCharacterCount(): number - возвращает количество символов в тексте.
+// getWords(): string[] - возвращает массив слов из текста.
+// getReversedText(): string - возвращает текст в обратном порядке.
+
+class StringManipulator {
+    text: string = 'Vika Stolyar';
+    getCharacterCount(): number {
+        let quntity: number = this.text.length;
+        return quntity
+    };
+    getWords(): string[] {
+        let array: string[] = [];
+        let arr: string[] = this.text.split('')
+        for (let i = 0; i < arr.length; i++) {
+            array.push(arr[i])
+        }
+        return array
+    };
+    getReversedText(): string {
+        let reverseText: string = this.text.split('').reverse().join('');
+        return reverseText
+    }
+}
+
+export { isPalindrome, calculateFactorial, capitalizeString, StringArray, NumberArray, StringManipulator }

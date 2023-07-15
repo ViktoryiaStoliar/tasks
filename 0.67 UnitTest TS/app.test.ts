@@ -1,4 +1,4 @@
-import { isPalindrome, calculateFactorial, capitalizeString, StringArray, NumberArray } from './app'
+import { isPalindrome, calculateFactorial, capitalizeString, StringArray, NumberArray, StringManipulator } from './app'
 
 describe('isPalindrome:', () => {
     test('', () => {
@@ -56,3 +56,21 @@ describe('NumberArray:', () => {
         // console.log(res, res2);
     });
 })
+
+
+describe('StringManipulator:', () => {
+    test('', () => {
+        const stringManipulator = new StringManipulator();
+        const res1 = stringManipulator.getCharacterCount();
+        const res2 = stringManipulator.getWords();
+        const res3 = stringManipulator.getReversedText();
+        expect(res1).toBe(12);
+        expect(res2).toEqual([
+            'V', 'i', 'k', 'a',
+            ' ', 'S', 't', 'o',
+            'l', 'y', 'a', 'r'
+        ]);
+        expect(res3).toBe('raylotS akiV');
+    })
+})
+

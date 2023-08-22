@@ -11,16 +11,21 @@
 // import Task9 from './Pages/Task9/Task9';
 // import Task12 from './Task 12/Task12';
 // import Task13 from './Task 13/Task13';
-import Task14 from './Pages/Task 14/Task14';
-import Task15 from './Pages/Task 15/Task 15';
-import Task16 from './Pages/Task 16/Task16';
-import Task17 from './Pages/Task 17/Task17';
-import Task19 from './Pages/Task 18/Task18';
-import Task18 from './Pages/Task 18/Task18';
-import Task20 from './Pages/Task 20/Task20';
-import Task21 from './Pages/Task 21/Task21';
-import Task23 from './Pages/Task 23/Task23';
-import Task22 from './Pages/Task22/Task22';
+// import Task14 from './Pages/Task 14/Task14';
+// import Task15 from './Pages/Task 15/Task 15';
+// import Task16 from './Pages/Task 16/Task16';
+// import Task17 from './Pages/Task 17/Task17';
+// import Task19 from './Pages/Task 18/Task18';
+// import Task18 from './Pages/Task 18/Task18';
+// import Task20 from './Pages/Task 20/Task20';
+// import Task21 from './Pages/Task 21/Task21';
+// import Task23 from './Pages/Task 23/Task23';
+// import Task22 from './Pages/Task22/Task22';
+
+import Task1 from "./Pages/Repeat/Task1";
+import Task2 from './Pages/Repeat/Task2';
+import Task3 from "./Pages/Repeat/Task3";
+import Task4 from "./Pages/Repeat/Task4";
 
 function App() {
   return (
@@ -70,9 +75,9 @@ function App() {
       <Task15 />
       <br />
       <br />
-      <br />
-      <Task16 />
-      <br />
+      <br /> */}
+      {/* <Task16 /> */}
+      {/* <br />
       <br />
       <br />
       <Task17 />
@@ -84,7 +89,7 @@ function App() {
       <br />
       <br />
       {/* <Task19 /> */}
-      <br/>
+      {/* <br/>
       <br/>
       <Task20/>
       <br/>
@@ -95,7 +100,23 @@ function App() {
       <Task22/>
       <br/>
       <br/>
-      <Task23/>
+      <Task23/> */}
+      <br />
+      <br />
+      <br />
+      <Task1 />
+      <br />
+      <br />
+      <br />
+      <Task2 />
+      <br />
+      <br />
+      <br />
+      <Task3 />
+      <br />
+      <br />
+      <br />
+      <Task4 />
     </div>
   );
 }

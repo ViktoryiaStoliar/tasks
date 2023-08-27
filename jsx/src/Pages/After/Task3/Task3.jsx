@@ -5,7 +5,7 @@ function Task3() {
     const str = ['vika@mail.ru', 'genya@mail.ru', 'alina_mail.ru']
     return (
         <div>
-        {str.filter((el) => el.includes('@'))}
+        {str.filter((el) => <li>{el.includes('@')}</li>)}
         </div>
     )
 }

@@ -2,24 +2,17 @@ import React, { useState } from 'react';
 
 const Task3 = () => {
 
-    const [value, setValue] = useState('Open');
-    const [flag, setFlag] = useState(true)
+    const [flag, setFlag] = useState(true);
 
-    function status() {
-        if (flag === true) {
-            setValue('Open');
-            setFlag(false)
-        } else {
-            setValue ('Close')
-            setFlag (true)
-        }
+    function show() {
+        flag === true ? setFlag(false) : setFlag(true)
     }
 
     return (
-        <div>
-            <button onClick={ status}>{value}</button>
-        </div>
-    );
+        <>
+            <button onClick={show}>{flag === true ? 'Open' : 'Close'}</button>
+        </>
+    )
 }
 
 export default Task3;

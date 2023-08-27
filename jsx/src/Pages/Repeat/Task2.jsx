@@ -1,25 +1,19 @@
 import React, { useState } from 'react';
 import style from './style.module.css'
 
-const Task2 = () => {
-
-    const [flag, setFlag] = useState(true);
+function Task2() {
+    const [flag, setFlag] = useState(false);
 
     function show() {
-        if (flag === true) {
-            setFlag(false);
-
-        } else {
-            setFlag(true)
-        }
+        flag === true ? setFlag(false) : setFlag(true)
     }
-
+    // const [green, setGreen] = useState()
     return (
-        <div>
-            <h1 className={flag === true ? style.red : style.blue}>Viktoriya</h1>
-            <button onClick={show}>Добавь увета</button>
-        </div>
-    );
+        <>
+            <h1 className={flag === true ? style.blue : style.red}>Привет!</h1>
+            <button onClick={ show}>Добавь цвет!</button>
+        </>
+    )
 }
 
 export default Task2;

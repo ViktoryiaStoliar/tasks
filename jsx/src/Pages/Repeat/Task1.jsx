@@ -2,28 +2,28 @@ import React, { useState } from 'react';
 
 const Task1 = () => {
 
-    const [num, setNum] = useState('');
+    const [data, setData] = useState('');
     const [flag, setFlag] = useState(true);
 
-    function change() {
-        if (flag === true) {
-            setNum('Hi')
-            setFlag(false)
-        } else {
-            setNum('')
-            setFlag(true)
-        }
+function res (){
+    if (flag === true) {
+        setData('Hi') 
+        setFlag(false)
+    } else {
+        setData('')
+        setFlag(true)
     }
-
+}
+    
     return (
         <>
-            <h1>{num}</h1>
-            <button onClick={change}>Поздороваться</button>
+        <h1>{data}</h1>
+        <button onClick={res}>Поздороваться!</button>
         </>
-    );
+    )
 }
 
-export default Task1;
+   export default Task1;
 
 
 // у тебя есть кнопка с названием ,,поздороваться,,. по клику на кнопку

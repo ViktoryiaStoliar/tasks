@@ -1,4 +1,4 @@
-// import Task1 from './Pages/Task1/Task1';
+// {import Task1 from './Pages/Task1/Task1';
 // import Task10 from './Pages/Task10/Task10';
 // import Task11 from './Pages/Task11/Task11';
 // import Task2 from './Pages/Task2/Task2';
@@ -20,12 +20,18 @@
 // import Task20 from './Pages/Task 20/Task20';
 // import Task21 from './Pages/Task 21/Task21';
 // import Task23 from './Pages/Task 23/Task23';
-// import Task22 from './Pages/Task22/Task22';
+// import Task22 from './Pages/Task22/Task22';}
+
 
 import Task1 from "./Pages/Repeat/Task1";
 import Task2 from './Pages/Repeat/Task2';
 import Task3 from "./Pages/Repeat/Task3";
 import Task4 from "./Pages/Repeat/Task4";
+import Task5 from "./Pages/Repeat/Task5";
+import Task6 from "./Pages/Repeat/Task6";
+import Task7 from "./Pages/Repeat/Task7";
+import Task8 from "./Pages/Repeat/Task8";
+import Task9 from "./Pages/Repeat/Task9";
 
 function App() {
   return (
@@ -59,15 +65,15 @@ function App() {
       <br />
       <Task10 />
       <br />
-      <br /> */}
-      {/* <Task11 />
+      <br />
+      <Task11 />
       <br />
       <br />
       <Task12 />
       <br />
       <br />
-      <Task13 /> */}
-      {/* <br />
+      <Task13 />
+      <br />
       <br />
       <Task14 />
       <br />
@@ -75,32 +81,32 @@ function App() {
       <Task15 />
       <br />
       <br />
-      <br /> */}
-      {/* <Task16 /> */}
-      {/* <br />
+      <br />
+      <Task16 />
+      <br />
       <br />
       <br />
       <Task17 />
       <br />
       <br />
-      <br /> */}
-      {/* <Task18 /> */}
+      <br />
+      <Task18 />
       <br />
       <br />
       <br />
-      {/* <Task19 /> */}
-      {/* <br/>
-      <br/>
-      <Task20/>
-      <br/>
-      <br/>
-      <Task21/>
-      <br/>
-      <br/>
-      <Task22/>
-      <br/>
-      <br/>
-      <Task23/> */}
+      <Task19 />
+      <br />
+      <br />
+      <Task20 />
+      <br />
+      <br />
+      <Task21 />
+      <br />
+      <br />
+      <Task22 />
+      <br />
+      <br />
+        <Task23 />*/}
       <br />
       <br />
       <br />
@@ -117,6 +123,29 @@ function App() {
       <br />
       <br />
       <Task4 />
+      <br />
+      <br />
+      <br />
+      <Task5 />
+      <br />
+      <br />
+      <br />
+      <Task6/>
+      <br />
+      <br />
+      <br />
+      <Task7/>
+      <br />
+      <br />
+      <br />
+      <Task8/>
+      <br />
+      <br />
+      <br />
+      <Task9/>
+      <br />
+      <br />
+      <br />
     </div>
   );
 }

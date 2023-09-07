@@ -22,16 +22,20 @@
 // import Task23 from './Pages/Task 23/Task23';
 // import Task22 from './Pages/Task22/Task22';}
 
+import Task2 from "./Pages/Hooks/Task2";
+// import Task3 from "./Pages/Hooks/Task3";
+import Task5 from "./Pages/Hooks/Task5";
 
-import Task1 from "./Pages/Repeat/Task1";
-import Task2 from './Pages/Repeat/Task2';
-import Task3 from "./Pages/Repeat/Task3";
-import Task4 from "./Pages/Repeat/Task4";
-import Task5 from "./Pages/Repeat/Task5";
-import Task6 from "./Pages/Repeat/Task6";
-import Task7 from "./Pages/Repeat/Task7";
-import Task8 from "./Pages/Repeat/Task8";
-import Task9 from "./Pages/Repeat/Task9";
+
+// import Task1 from "./Pages/Repeat/Task1";
+// import Task2 from './Pages/Repeat/Task2';
+// import Task3 from "./Pages/Repeat/Task3";
+// import Task4 from "./Pages/Repeat/Task4";
+// import Task5 from "./Pages/Repeat/Task5";
+// import Task6 from "./Pages/Repeat/Task6";
+// import Task7 from "./Pages/Repeat/Task7";
+// import Task8 from "./Pages/Repeat/Task8";
+// import Task9 from "./Pages/Repeat/Task9";
 
 function App() {
   return (
@@ -107,7 +111,7 @@ function App() {
       <br />
       <br />
         <Task23 />*/}
-      <br />
+      {/* <br />
       <br />
       <br />
       <Task1 />
@@ -142,7 +146,19 @@ function App() {
       <br />
       <br />
       <br />
-      <Task9/>
+      <Task9/> */}
+      <br />
+      <br />
+      <br />
+      <Task2 />
+      <br />
+      <br />
+      <br />
+      {/* <Task3 /> */}
+      <br />
+      <br />
+      <br />
+      <Task5/>
       <br />
       <br />
       <br />

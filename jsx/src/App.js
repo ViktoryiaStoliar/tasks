@@ -22,9 +22,15 @@
 // import Task23 from './Pages/Task 23/Task23';
 // import Task22 from './Pages/Task22/Task22';}
 
-import Task2 from "./Pages/Hooks/Task2";
+import Task from "./Pages/Hooks/useEffect/Task";
+import Task3 from "./Pages/Hooks/useRef/Task3";
+import Task1 from "./Pages/Hooks/useRef/Task1";
+import Task2 from "./Pages/Hooks/useRef/Task2";
+import Task4 from "./Pages/Hooks/useEffect/Task4";
+
+// import Task2 from "./Pages/Hooks/Task2";
 // import Task3 from "./Pages/Hooks/Task3";
-import Task5 from "./Pages/Hooks/Task5";
+// import Task5 from "./Pages/Hooks/Task5";
 
 
 // import Task1 from "./Pages/Repeat/Task1";
@@ -150,7 +156,7 @@ function App() {
       <br />
       <br />
       <br />
-      <Task2 />
+      {/* <Task2 /> */}
       <br />
       <br />
       <br />
@@ -158,7 +164,11 @@ function App() {
       <br />
       <br />
       <br />
-      <Task5/>
+      {/* <Task5/> */}
+      <br />
+      <br />
+      <br />
+      <Task4/>
       <br />
       <br />
       <br />

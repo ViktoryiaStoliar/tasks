@@ -1,3 +1,6 @@
+import myContext from './context/context';
+import { useState } from 'react';
+
 // {import Task1 from './Pages/Task1/Task1';
 // import Task10 from './Pages/Task10/Task10';
 // import Task11 from './Pages/Task11/Task11';
@@ -22,11 +25,7 @@
 // import Task23 from './Pages/Task 23/Task23';
 // import Task22 from './Pages/Task22/Task22';}
 
-import Task from "./Pages/Hooks/useEffect/Task";
-import Task3 from "./Pages/Hooks/useRef/Task3";
-import Task1 from "./Pages/Hooks/useRef/Task1";
-import Task2 from "./Pages/Hooks/useRef/Task2";
-import Task4 from "./Pages/Hooks/useEffect/Task4";
+import Task1 from "./Pages/Hooks/useState/Task1";
 
 // import Task2 from "./Pages/Hooks/Task2";
 // import Task3 from "./Pages/Hooks/Task3";
@@ -43,10 +42,28 @@ import Task4 from "./Pages/Hooks/useEffect/Task4";
 // import Task8 from "./Pages/Repeat/Task8";
 // import Task9 from "./Pages/Repeat/Task9";
 
+
 function App() {
+
+  const [value, setValue] = useState('ru')
+
+  const obj = {
+    id: 1,
+    name: "Vika",
+    surname: "Stolyar",
+    value,
+    getLang
+  }
+
+  function getLang(e) {
+    setValue(e.target.textContent)
+  }
+
   return (
-    <div className="App">
-      {/* <Task1 />
+
+    <myContext.Provider value={obj}>
+      <div className="App">
+        {/* <Task1 />
       <br />
       <br />
       <Task2 />
@@ -117,7 +134,7 @@ function App() {
       <br />
       <br />
         <Task23 />*/}
-      {/* <br />
+        {/* <br />
       <br />
       <br />
       <Task1 />
@@ -153,26 +170,27 @@ function App() {
       <br />
       <br />
       <Task9/> */}
-      <br />
-      <br />
-      <br />
-      {/* <Task2 /> */}
-      <br />
-      <br />
-      <br />
-      {/* <Task3 /> */}
-      <br />
-      <br />
-      <br />
-      {/* <Task5/> */}
-      <br />
-      <br />
-      <br />
-      <Task4/>
-      <br />
-      <br />
-      <br />
-    </div>
+        <br />
+        <br />
+        <br />
+        {/* <Task2 /> */}
+        <br />
+        <br />
+        <br />
+        {/* <Task3 /> */}
+        <br />
+        <br />
+        <br />
+        {/* <Task5/> */}
+        <br />
+        <br />
+        <br />
+        <Task1 />
+        <br />
+        <br />
+        <br />
+      </div>
+    </myContext.Provider>
   );
 }
 

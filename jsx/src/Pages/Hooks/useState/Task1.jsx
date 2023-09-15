@@ -84,6 +84,55 @@
 // который позволяет пользователю выбирать цвет из списка и отображает цвет
 // выбранного цвета на экране.
 
+// import React, { useState } from 'react';
+
+// const Task1 = () => {
+
+//     const [color, setColor] = useState('red')
+
+//     return (
+//         <div>
+//             <div style={{ backgroundColor: color, width: '35px', height: '12px' }}></div>
+//             <button onClick={(e) => setColor(e.target.textContent)}>Blue</button>
+//             <button onClick={(e) => setColor(e.target.textContent)}>Green</button>
+//             <button onClick={(e) => setColor(e.target.textContent)}>Black</button>
+//             <button onClick={(e) => setColor(e.target.textContent)}>Yellow</button>
+
+//         </div>
+//     );
+// }
+
+// export default Task1;
+
+// 5. Список задач с использованием useState: Создайте компонент списка задач,
+// который позволяет пользователю добавлять и удалять задачи из списка.
+
+import React, { useState } from 'react';
+
+const Task1 = () => {
+
+    // const [list, setList] = useState()
+    const array = ['сходить в магазин', 'помыть машину', 'оплатить кружки']
+
+    // function getDataList() {
+
+    // }
+
+    return (
+        <div>
+            <ul>
+                <span> {array.map((el) => <li>{el}<button>    Удалить задачу</button></li>)}</span>
+            </ul>
+            {/* <input onChange={ }></input> */}
+        </div>
+    );
+}
+
+export default Task1;
+
+
+
+
 // import React, { useState, useMemo } from 'react';
 
 // function letSum(a, b) {
@@ -291,30 +340,28 @@
 // хранить текущий выбранный язык и переводить текст на выбранный язык в
 // компонентах.
 
+// import React, { useState, useContext } from 'react';
+// import myContext from '../../../context/context';
 
-import React, { useState, useContext } from 'react';
-import myContext from '../../../context/context';
+// const Task1 = () => {
 
-const Task1 = () => {
+// const {value, getLang} = useContext(myContext)
 
-const {value, getLang} = useContext(myContext)
+//     const obj = {
+//         ru: "ПРИВЕТ",
+//         en: "Hi"
+//     }
 
-    const obj = {
-        ru: "ПРИВЕТ",
-        en: "Hi"
-    }
+//     return (
+//         <div>
+//             <button onClick={getLang}>en</button>
+//             <button onClick={getLang}>ru</button>
+//             <p>{obj[value]}</p>
+//         </div>
+//     );
+// }
 
-
-    return (
-        <div>
-            <button onClick={getLang}>en</button>
-            <button onClick={getLang}>ru</button>
-            <p>{obj[value]}</p>
-        </div>
-    );
-}
-
-export default Task1;
+// export default Task1;
 
 
 

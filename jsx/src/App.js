@@ -46,17 +46,24 @@ import Task1 from "./Pages/Hooks/useState/Task1";
 function App() {
 
   const [value, setValue] = useState('ru')
+  const [role, setRole] = useState('Пользователь')
 
   const obj = {
     id: 1,
     name: "Vika",
     surname: "Stolyar",
     value,
-    getLang
+    getLang,
+    role,
+    getRole
   }
 
   function getLang(e) {
     setValue(e.target.textContent)
+  }
+
+  function getRole(e) {
+    setRole(e.target.textContent)
   }
 
   return (

@@ -107,28 +107,28 @@
 // 5. Список задач с использованием useState: Создайте компонент списка задач,
 // который позволяет пользователю добавлять и удалять задачи из списка.
 
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 
-const Task1 = () => {
+// const Task1 = () => {
 
-    // const [list, setList] = useState()
-    const array = ['сходить в магазин', 'помыть машину', 'оплатить кружки']
+//     // const [list, setList] = useState()
+//     const array = ['сходить в магазин', 'помыть машину', 'оплатить кружки']
 
-    // function getDataList() {
+//     // function getDataList() {
 
-    // }
+//     // }
 
-    return (
-        <div>
-            <ul>
-                <span> {array.map((el) => <li>{el}<button>    Удалить задачу</button></li>)}</span>
-            </ul>
-            {/* <input onChange={ }></input> */}
-        </div>
-    );
-}
+//     return (
+//         <div>
+//             <ul>
+//                 <span> {array.map((el) => <li>{el}<button>    Удалить задачу</button></li>)}</span>
+//             </ul>
+//             {/* <input onChange={ }></input> */}
+//         </div>
+//     );
+// }
 
-export default Task1;
+// export default Task1;
 
 
 
@@ -364,30 +364,182 @@ export default Task1;
 // export default Task1;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // 3. Создайте приложение, которое отображает информацию о текущей роли
 // пользователя (например, "Администратор" или "Пользователь"). Используйте
 // useContext, чтобы хранить текущую роль и отображать ее на экране.
+// import React, { useContext } from 'react';
+// import myContext from '../../../context/context';
+
+// const Task1 = () => {
+
+//     const { role, getRole } = useContext(myContext);
+
+//     const objRol = {
+//         role1: "Администратор",
+//         role2: "Пользователь"
+//     };
+
+//     return (
+//         <div>
+//             <button onClick={getRole}>role1</button>
+//             <button onClick={getRole}>role2</button>
+//             <p>{objRol[role]}</p>
+//         </div>
+//     );
+// }
+
+// export default Task1;
+
+// useCallback:
+// 1. Создайте компонент с кнопкой "Увеличить счетчик". При каждом клике на кнопку
+// счетчик должен увеличиваться на 1. Используйте useCallback, чтобы
+// оптимизировать обработчик клика на кнопке.
+
+// import React, { useCallback, useState } from 'react';
+
+// const Task1 = () => {
+
+//     const [count, setCount] = useState(0)
+
+//     return (
+//         <div>
+//             <button onClick={useCallback(() => setCount(count + 1), [count])}>+1</button>
+//             <button onClick={useCallback(() => setCount(count - 1), [count])}>-1</button>
+//             <p>Результат: {count}</p>
+//         </div>
+//     );
+// }
+
+// export default Task1;
+
+
+// 2. Создайте компонент, который отображает список элементов с кнопками
+// "Удалить". При нажатии на кнопку элемент должен быть удален из списка.
+// Используйте useCallback, чтобы оптимизировать функцию удаления элемента.
+
+// import React, { useCallback, useState } from 'react';
+
+// const Task1 = () => {
+
+//     const [res, setRes] = useState(['sdfgs', 'sdfgd', 'wergw'])
+
+//     const del = useCallback( function del(e) {
+//         const filtered = res.filter((el) => el !== e.target.id);
+//         setRes(filtered)
+//     }, [res])
+
+//     return (
+//         <div>
+//             <div>{res.map((el) => <div><span>{el}</span><button id={el} onClick={del}>Удалить</button></div>)}</div>
+//         </div>
+//     );
+// }
+
+// export default Task1;
+
+// 3. Создайте компонент, который имеет кнопку "Изменить статус". При каждом клике
+// на кнопку статус компонента должен меняться между "Активный" и "Неактивный".
+// Используйте useCallback, чтобы оптимизировать функцию изменения статуса.
+// import React, { useCallback, useState } from 'react';
+
+// const Task1 = () => {
+
+//     const [value, setValue] = useState(true)
+//     const res = useCallback(() => value === true ? setValue(false) : setValue(true), [value])
+
+//     return (
+//         <div>
+//             <p>{value === true ? "Активный" : "Неактивный"}</p>
+//             <button onClick={res}>Изменить статус</button>
+//         </div>
+//     );
+// }
+
+// export default Task1;
+
+// 4. Создайте компонент, который предоставляет пользователю выбор цвета из
+// списка. При выборе цвета, компонент должен отображать выбранный цвет на
+// странице. Используйте useCallback, чтобы оптимизировать функцию выбора
+// цвета.
+
+// 5. Создайте компонент, который позволяет пользователю добавлять и удалять
+// элементы из списка. Используйте useCallback, чтобы оптимизировать функции
+// добавления и удаления элементов.
+
+// import React, { useState } from 'react';
+
+// const Task1 = () => {
+
+//     const [inpVal, setInpVal] = useState('')
+//     const [value, setValue] = useState(['fgsdg', 'sdgsdgs', 'sdgsdgsd'])
+
+//     function add() {
+//         setValue([...value, inpVal]);
+//         setInpVal('')
+//     }
+
+//     function del(e) {
+//         const filtered = value.filter((el) => el !== e.target.id)
+//         setValue(filtered)
+//     }
+
+//     return (
+//         <div>
+//             <input value={inpVal} type="text" onChange={(e) => setInpVal(e.target.value)} />
+//             <div>{value?.map((el) => <div><span>{el}</span><button id={el} onClick={del}>Удалить элемент</button></div>)}</div>
+//             <button onClick={add}>Добавить элемент</button>
+//         </div>
+//     );
+// }
+
+// export default Task1;
+
+// useReducer:
+// 1. Создайте компонент счетчика, который может увеличивать или уменьшать
+// значение при нажатии на соответствующие кнопки.
+
+// import React, { useReducer } from 'react';
+
+// function reducer(state, action) {
+//     switch (action) {
+//         case 'INCREMENT':
+//             return state + 1;
+
+//         case 'DECREMENT':
+//             return state - 1;
+
+//         default:
+//             break;
+//     }
+// }
+
+// const Task1 = () => {
+
+//     const [counter, dispatch] = useReducer(reducer, 0);
+
+//     return (
+//         <div>
+//             <p>{counter}</p>
+//             <button onClick={() => dispatch('INCREMENT')}>+1</button>
+//             <button onClick={() => dispatch('DECREMENT')}>-1</button>
+//         </div>
+//     );
+// }
+
+// export default Task1;
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

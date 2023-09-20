@@ -513,20 +513,7 @@
 //     }
 // }
 
-// const Task1 = () => {
 
-//     const [counter, dispatch] = useReducer(reducer, 0);
-
-//     return (
-//         <div>
-//             <p>{counter}</p>
-//             <button onClick={() => dispatch('INCREMENT')}>+1</button>
-//             <button onClick={() => dispatch('DECREMENT')}>-1</button>
-//         </div>
-//     );
-// }
-
-// export default Task1;
 
 
 

@@ -5,6 +5,7 @@ import palindrom from '../slice/palindrom';
 import showHide from '../slice/show_hide';
 import validationEmail from '../slice/validationEmail';
 import mathCalculation from '../slice/mathCalculation';
+import isValidEmail from '../slice/validEmail';
 
 const store = configureStore({
     reducer: {
@@ -13,7 +14,8 @@ const store = configureStore({
         palindrom,
         showHide,
         validationEmail,
-        mathCalculation
+        mathCalculation,
+        isValidEmail
     }
 })
 

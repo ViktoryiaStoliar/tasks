@@ -1,6 +1,6 @@
 import React from 'react';
 
-const UseCallback = () => {
+const ref = () => {
     return (
         <div>
             
@@ -8,4 +8,4 @@ const UseCallback = () => {
     );
 }
 
-export default UseCallback;
+export default ref;

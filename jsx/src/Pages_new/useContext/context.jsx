@@ -1,6 +1,6 @@
 import React from 'react';
 
-const UseRef = () => {
+const context = () => {
     return (
         <div>
             
@@ -8,4 +8,4 @@ const UseRef = () => {
     );
 }
 
-export default UseRef;
+export default context;

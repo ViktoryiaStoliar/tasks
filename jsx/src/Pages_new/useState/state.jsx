@@ -1,6 +1,8 @@
 import React from 'react';
 
-const UseMemo = () => {
+const state = () => {
+ 
+ 
     return (
         <div>
             
@@ -8,4 +10,4 @@ const UseMemo = () => {
     );
 }
 
-export default UseMemo;
+export default state;

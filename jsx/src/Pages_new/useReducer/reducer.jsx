@@ -1,6 +1,6 @@
 import React from 'react';
 
-const UseContext = () => {
+const reducer = () => {
     return (
         <div>
             
@@ -8,4 +8,4 @@ const UseContext = () => {
     );
 }
 
-export default UseContext;
+export default reducer;

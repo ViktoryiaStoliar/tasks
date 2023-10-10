@@ -1,6 +1,6 @@
 import React from 'react';
 
-const UseEffect = () => {
+const callback = () => {
     return (
         <div>
             
@@ -8,4 +8,4 @@ const UseEffect = () => {
     );
 }
 
-export default UseEffect;
+export default callback;

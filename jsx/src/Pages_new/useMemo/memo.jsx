@@ -1,6 +1,6 @@
 import React from 'react';
 
-const UseReducer = () => {
+const memo = () => {
     return (
         <div>
             
@@ -8,4 +8,4 @@ const UseReducer = () => {
     );
 }
 
-export default UseReducer;
+export default memo;

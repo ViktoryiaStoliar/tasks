@@ -1,8 +1,6 @@
 import React from 'react';
 
-const UseState = () => {
- 
- 
+const effect = () => {
     return (
         <div>
             
@@ -10,4 +8,4 @@ const UseState = () => {
     );
 }
 
-export default UseState;
+export default effect;

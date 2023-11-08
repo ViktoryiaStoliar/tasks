@@ -25,7 +25,8 @@ import { useState } from 'react';
 // import Task23 from './Pages/Task 23/Task23';
 // import Task22 from './Pages/Task22/Task22';}
 
-import Task1 from "./Pages/Hooks/useState/Task1";
+// import Task1 from "./Pages/Hooks/useState/Task1";
+import TaskUseSt from './Pages/Hooks/Task_useSt';
 
 // import Task2 from "./Pages/Hooks/Task2";
 // import Task3 from "./Pages/Hooks/Task3";
@@ -192,7 +193,8 @@ function App() {
         <br />
         <br />
         <br />
-        <Task1 />
+        {/* <Task1 /> */}
+        <TaskUseSt/>
         <br />
         <br />
         <br />

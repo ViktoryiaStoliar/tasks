@@ -25,7 +25,7 @@ export default Task8;
 // (если нажали на ,,цена,, отображать ,,цена,, в h1)
 
 
-const Task1 = () => {
+// const Task1 = () => {
 
     //     const [value, setValue] = useState();
     //     const [list, setList] = useState([]);

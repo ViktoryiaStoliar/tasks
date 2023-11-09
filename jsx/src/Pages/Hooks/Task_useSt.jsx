@@ -82,20 +82,19 @@ const TaskUseSt = () => {
     // {Task5: Создайте компонент с кнопкой "Показать/Скрыть текст". При
     // нажатии на кнопку текст должен появляться или исчезать.
 
-    const [value, setValue] = useState('')
+    // const [value, setValue] = useState('')
 
-    function res() {
-        value === true ? setValue(false) : setValue(true)
-    }
-
-    return (
-        <>
-            <h1>{value === true ? 'Hello, my dear friends!' : ' '}</h1>
-            <button onClick={res}>Показать/Скрыть текст</button>
-        </>
-    );
+    // function res() {
+    //     value === true ? setValue(false) : setValue(true)
     // }
 
+    // return (
+    //     <>
+    //         <h1>{value === true ? 'Hello, my dear friends!' : ' '}</h1>
+    //         <button onClick={res}>Показать/Скрыть текст</button>
+    //     </>
+    // );
+    // }
 
 }
 

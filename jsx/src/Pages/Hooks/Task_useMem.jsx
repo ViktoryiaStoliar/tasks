@@ -7,21 +7,21 @@ const TaskUseMem = () => {
     // useMemo для кеширования результата суммы. При изменении значений чисел,
     // сумма должна пересчитываться только тогда, когда необходимо.
 
-    const arr = [1, 2, 3, 4, 5];
-
     const [value1, setValue1] = useState(0);
     const [value2, setValue2] = useState(0);
+    const [res, setRes] = useState();
 
-    function plus() {
-        setValue1(arr[Math.round(Math.random() * 3)]) + setValue2(arr[Math.round(Math.random() * 3)])
+    function result() {
+        setRes(value1 + value2)
     }
-    // const plus = useMemo(() => {
-    //     return )
+
+    useMemo(result, [value1, value2])
 
     return (
         <div>
-            <h1>{value1 + value2}</h1>
-            <button onClick={plus}>Показать результат</button>
+            <p>{res}</p>
+            <input onChange={(e) => setValue1(+e.target.value)}></input>
+            <input onChange={(e) => setValue2(+e.target.value)}></input>
         </div>
     );
     // }
